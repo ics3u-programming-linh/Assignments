@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace FallingObjectsLinh.Properties
+namespace FallingObjectsLinhH.Properties
 {
 
 

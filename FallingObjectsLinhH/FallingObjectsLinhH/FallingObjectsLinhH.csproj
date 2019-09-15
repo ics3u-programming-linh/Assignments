@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{183112BB-EC68-4B3B-BB4A-ABADF79E804C}</ProjectGuid>
+    <ProjectGuid>{8C872808-779A-4CC9-A6ED-BC1136A6DBF0}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>FallingObjectsLinh</RootNamespace>
-    <AssemblyName>FallingObjectsLinh</AssemblyName>
+    <RootNamespace>FallingObjectsLinhH</RootNamespace>
+    <AssemblyName>FallingObjectsLinhH</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -46,14 +46,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="FallingObjectsForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="FallingObjectsForm.Designer.cs">
+      <DependentUpon>FallingObjectsForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
+    <Compile Include="FallingObjects.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FallingObjectsForm.resx">
+      <DependentUpon>FallingObjectsForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

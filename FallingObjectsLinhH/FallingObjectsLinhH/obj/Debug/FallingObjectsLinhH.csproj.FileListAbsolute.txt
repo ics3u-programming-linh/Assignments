@@ -1,0 +1,10 @@
+C:\Users\Linh_\Desktop\Assignments\FallingObjectsLinhH\FallingObjectsLinhH\bin\Debug\FallingObjectsLinhH.exe.config
+C:\Users\Linh_\Desktop\Assignments\FallingObjectsLinhH\FallingObjectsLinhH\bin\Debug\FallingObjectsLinhH.exe
+C:\Users\Linh_\Desktop\Assignments\FallingObjectsLinhH\FallingObjectsLinhH\bin\Debug\FallingObjectsLinhH.pdb
+C:\Users\Linh_\Desktop\Assignments\FallingObjectsLinhH\FallingObjectsLinhH\obj\Debug\FallingObjectsLinhH.csprojAssemblyReference.cache
+C:\Users\Linh_\Desktop\Assignments\FallingObjectsLinhH\FallingObjectsLinhH\obj\Debug\FallingObjectsLinhH.frmFallingObjects.resources
+C:\Users\Linh_\Desktop\Assignments\FallingObjectsLinhH\FallingObjectsLinhH\obj\Debug\FallingObjectsLinhH.Properties.Resources.resources
+C:\Users\Linh_\Desktop\Assignments\FallingObjectsLinhH\FallingObjectsLinhH\obj\Debug\FallingObjectsLinhH.csproj.GenerateResource.cache
+C:\Users\Linh_\Desktop\Assignments\FallingObjectsLinhH\FallingObjectsLinhH\obj\Debug\FallingObjectsLinhH.csproj.CoreCompileInputs.cache
+C:\Users\Linh_\Desktop\Assignments\FallingObjectsLinhH\FallingObjectsLinhH\obj\Debug\FallingObjectsLinhH.exe
+C:\Users\Linh_\Desktop\Assignments\FallingObjectsLinhH\FallingObjectsLinhH\obj\Debug\FallingObjectsLinhH.pdb
