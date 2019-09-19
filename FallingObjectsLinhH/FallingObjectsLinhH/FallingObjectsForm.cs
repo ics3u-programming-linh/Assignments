@@ -4,7 +4,9 @@
  * Created for: ICS3U Programming
  * Assignment #2 - Falling Objects
  * This program... calculates the time after an object falls off of a 100m cliff
-*/using System;
+*/
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
