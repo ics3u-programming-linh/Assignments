@@ -1,4 +1,10 @@
-﻿using System;
+﻿/*
+ * Created by: Linh Ho
+ * Created on: September 19th, 2019
+ * Created for: ICS3U Programming
+ * Assignment #2 - Falling Objects
+ * This program... calculates the time after an object falls off of a 100m cliff
+*/using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -48,7 +54,7 @@ namespace FallingObjectsLinhH
             lblTitle.Visible = false;
             btnNextPage.Visible = false;
             
-            // Make the question and images visible
+            // Make the question and image visible
             lblQuestion.Visible = true;
             lblQuestion2.Visible = true;
             imgCliff2.Visible = true;
