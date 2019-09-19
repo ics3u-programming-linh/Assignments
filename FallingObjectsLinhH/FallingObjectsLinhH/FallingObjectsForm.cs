@@ -90,9 +90,8 @@ namespace FallingObjectsLinhH
 
         private void BtnCalculate_Click(object sender, EventArgs e)
         {
-            // Make the labels visible
-            lblAnswer.Visible = true;
-            lblHeight.Visible = true;
+            // declare local variables
+            double time, answer;
 
             // Create an error when nothing is entered
             if (txtTime.Text == "")
@@ -101,34 +100,38 @@ namespace FallingObjectsLinhH
 
             }
 
+            // Make the labels visible
+            lblAnswer.Visible = true;
+            lblHeight.Visible = true;
+
             // Convert from string to a double
-            double time = double.Parse(txtTime.Text);
-           
+            time = double.Parse(txtTime.Text);
+
             {
                 
                 // Formula for falling object
-                double Answer = 100 - (0.5 * 9.81 * Math.Pow(time, 2));
+                answer = 100 - (0.5 * 9.81 * Math.Pow(time, 2));
 
                 // Round the answer
-                Answer = Answer * 100;
-                Answer = Math.Round(Answer);
-                Answer = Answer / 100;
+                answer = answer * 100;
+                answer = Math.Round(answer);
+                answer = answer / 100;
 
-                if (Answer > 0)
-
-                // Change the text
-                lblHeight.Text = Convert.ToString(Answer) + "m";
-
-                else
-
+                if (answer > 0)
                 {
-                    // Displays reaching the ground already
+                    // Change the text
+                    lblHeight.Text = Convert.ToString(answer) + "m";
+                }
+                else
+                {
+                    // Display text that it already reached the ground
                     lblHeight.Text = "It already hit the ground!";
                 }
 
                 // Does not allow to input a negative number 
                 if (time < 0)
                 {
+                    // Displays a text
                     lblHeight.Text = "Input a positive number.";
                 }
 
@@ -148,6 +151,11 @@ namespace FallingObjectsLinhH
         }
 
         private void BtnBack_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ExtraStepToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }
