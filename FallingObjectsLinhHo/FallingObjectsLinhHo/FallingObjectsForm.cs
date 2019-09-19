@@ -85,7 +85,7 @@ namespace FallingObjectsLinhHo
             picCliff.Image = Properties.Resources.cliff;
 
             // Convert the string from each text box to a double
-                time = double.Parse(txtTime.Text);
+            time = double.Parse(txtTime.Text);
             
             // Does not allow to input a negative number 
             if (time < 0)
