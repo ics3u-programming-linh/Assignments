@@ -1,4 +1,12 @@
-﻿using System;
+﻿/*
+ * Created by: Linh Ho
+ * Created on: September 19th, 2019
+ * Created for: ICS3U Programming
+ * Assignment #2 - Falling Objects
+ * This program... calculates the time after an object falls off of a 100m cliff
+*/
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -48,7 +56,7 @@ namespace FallingObjectsLinhH
             lblTitle.Visible = false;
             btnNextPage.Visible = false;
             
-            // Make the question and images visible
+            // Make the question and image visible
             lblQuestion.Visible = true;
             lblQuestion2.Visible = true;
             imgCliff2.Visible = true;
@@ -90,9 +98,8 @@ namespace FallingObjectsLinhH
 
         private void BtnCalculate_Click(object sender, EventArgs e)
         {
-            // Make the labels visible
-            lblAnswer.Visible = true;
-            lblHeight.Visible = true;
+            // declare local variables
+            double time, answer;
 
             // Create an error when nothing is entered
             if (txtTime.Text == "")
@@ -106,7 +113,7 @@ namespace FallingObjectsLinhH
                 double time = double.Parse(txtTime.Text);
 
                 // Formula for falling object
-                double Answer = 100 - (0.5 * 9.81 * Math.Pow(time, 2));
+                answer = 100 - (0.5 * 9.81 * Math.Pow(time, 2));
 
                 // Round the answer
                 Answer = Answer * 100;
@@ -120,13 +127,14 @@ namespace FallingObjectsLinhH
                 }
                 else
                 {
-                    // Displays reaching the ground already
+                    // Display text that it already reached the ground
                     lblHeight.Text = "It already hit the ground!";
                 }
 
                 // Does not allow to input a negative number 
                 if (time < 0)
                 {
+                    // Displays a text
                     lblHeight.Text = "Input a positive number.";
                 }
 
@@ -146,6 +154,11 @@ namespace FallingObjectsLinhH
         }
 
         private void BtnBack_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ExtraStepToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }
