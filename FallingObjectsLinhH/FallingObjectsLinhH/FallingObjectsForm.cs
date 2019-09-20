@@ -3,7 +3,9 @@
  * Created on: September 19th, 2019
  * Created for: ICS3U Programming
  * Assignment #2 - Falling Objects
- * This program... calculates the time after an object falls off of a 100m cliff
+ * This program allows a user to input their time and it
+ * calculates the height of the object
+ * after falling from a 100m cliff
 */
 
 using System;
@@ -55,13 +57,11 @@ namespace FallingObjectsLinhH
             imgCliff.Visible = false;
             lblTitle.Visible = false;
             btnNextPage.Visible = false;
-            
-            // Make the question and image visible
             lblQuestion.Visible = true;
             lblQuestion2.Visible = true;
             imgCliff2.Visible = true;
 
-            // Adjust the labels and text
+            // Adjust the label and text
             lblQuestion.SendToBack();
             txtTime.BringToFront();
 
@@ -107,23 +107,25 @@ namespace FallingObjectsLinhH
                 lblHeight.Text = "Error, please enter a valid value";
 
             }
+
             else
+
             {
                 // Convert from string to a double
-                double time = double.Parse(txtTime.Text);
+                time = double.Parse(txtTime.Text);
 
                 // Formula for falling object
                 answer = 100 - (0.5 * 9.81 * Math.Pow(time, 2));
 
                 // Round the answer
-                Answer = Answer * 100;
-                Answer = Math.Round(Answer);
-                Answer = Answer / 100;
+                answer = answer * 100;
+                answer = Math.Round(answer);
+                answer = answer / 100;
 
-                if (Answer > 0)
+                if (answer > 0)
                 {
                     // Change the text
-                    lblHeight.Text = Convert.ToString(Answer) + "m";
+                    lblHeight.Text = Convert.ToString(answer) + "m";
                 }
                 else
                 {
@@ -136,6 +138,7 @@ namespace FallingObjectsLinhH
                 {
                     // Displays a text
                     lblHeight.Text = "Input a positive number.";
+
                 }
 
             }
