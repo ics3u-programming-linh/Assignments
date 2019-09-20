@@ -8,3 +8,13 @@ C:\Users\Linh_\Desktop\Assignments\FallingObjectsLinhH\FallingObjectsLinhH\obj\D
 C:\Users\Linh_\Desktop\Assignments\FallingObjectsLinhH\FallingObjectsLinhH\obj\Debug\FallingObjectsLinhH.csproj.CoreCompileInputs.cache
 C:\Users\Linh_\Desktop\Assignments\FallingObjectsLinhH\FallingObjectsLinhH\obj\Debug\FallingObjectsLinhH.exe
 C:\Users\Linh_\Desktop\Assignments\FallingObjectsLinhH\FallingObjectsLinhH\obj\Debug\FallingObjectsLinhH.pdb
+N:\Classes\Sem1-Fall2019\ICS3U Programming\HLinh (s272936)\Assignments\FallingObjectsLinhH\FallingObjectsLinhH\bin\Debug\FallingObjectsLinhH.exe.config
+N:\Classes\Sem1-Fall2019\ICS3U Programming\HLinh (s272936)\Assignments\FallingObjectsLinhH\FallingObjectsLinhH\bin\Debug\FallingObjectsLinhH.exe
+N:\Classes\Sem1-Fall2019\ICS3U Programming\HLinh (s272936)\Assignments\FallingObjectsLinhH\FallingObjectsLinhH\bin\Debug\FallingObjectsLinhH.pdb
+N:\Classes\Sem1-Fall2019\ICS3U Programming\HLinh (s272936)\Assignments\FallingObjectsLinhH\FallingObjectsLinhH\obj\Debug\FallingObjectsLinhH.csprojAssemblyReference.cache
+N:\Classes\Sem1-Fall2019\ICS3U Programming\HLinh (s272936)\Assignments\FallingObjectsLinhH\FallingObjectsLinhH\obj\Debug\FallingObjectsLinhH.frmFallingObjects.resources
+N:\Classes\Sem1-Fall2019\ICS3U Programming\HLinh (s272936)\Assignments\FallingObjectsLinhH\FallingObjectsLinhH\obj\Debug\FallingObjectsLinhH.Properties.Resources.resources
+N:\Classes\Sem1-Fall2019\ICS3U Programming\HLinh (s272936)\Assignments\FallingObjectsLinhH\FallingObjectsLinhH\obj\Debug\FallingObjectsLinhH.csproj.GenerateResource.cache
+N:\Classes\Sem1-Fall2019\ICS3U Programming\HLinh (s272936)\Assignments\FallingObjectsLinhH\FallingObjectsLinhH\obj\Debug\FallingObjectsLinhH.csproj.CoreCompileInputs.cache
+N:\Classes\Sem1-Fall2019\ICS3U Programming\HLinh (s272936)\Assignments\FallingObjectsLinhH\FallingObjectsLinhH\obj\Debug\FallingObjectsLinhH.exe
+N:\Classes\Sem1-Fall2019\ICS3U Programming\HLinh (s272936)\Assignments\FallingObjectsLinhH\FallingObjectsLinhH\obj\Debug\FallingObjectsLinhH.pdb

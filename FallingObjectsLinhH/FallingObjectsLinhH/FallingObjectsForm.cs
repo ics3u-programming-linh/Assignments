@@ -61,7 +61,7 @@ namespace FallingObjectsLinhH
             lblQuestion2.Visible = true;
             imgCliff2.Visible = true;
 
-            // Adjust the labels
+            // Adjust the labels and text
             lblQuestion.SendToBack();
             txtTime.BringToFront();
 
@@ -107,28 +107,23 @@ namespace FallingObjectsLinhH
                 lblHeight.Text = "Error, please enter a valid value";
 
             }
-
-            // Make the labels visible
-            lblAnswer.Visible = true;
-            lblHeight.Visible = true;
-
-            // Convert from string to a double
-            time = double.Parse(txtTime.Text);
-
+            else
             {
-                
+                // Convert from string to a double
+                double time = double.Parse(txtTime.Text);
+
                 // Formula for falling object
                 answer = 100 - (0.5 * 9.81 * Math.Pow(time, 2));
 
                 // Round the answer
-                answer = answer * 100;
-                answer = Math.Round(answer);
-                answer = answer / 100;
+                Answer = Answer * 100;
+                Answer = Math.Round(Answer);
+                Answer = Answer / 100;
 
-                if (answer > 0)
+                if (Answer > 0)
                 {
                     // Change the text
-                    lblHeight.Text = Convert.ToString(answer) + "m";
+                    lblHeight.Text = Convert.ToString(Answer) + "m";
                 }
                 else
                 {
