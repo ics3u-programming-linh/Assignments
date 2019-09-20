@@ -53,7 +53,7 @@ namespace FallingObjectsLinhH
             lblQuestion2.Visible = true;
             imgCliff2.Visible = true;
 
-            // Adjust the labels
+            // Adjust the labels and text
             lblQuestion.SendToBack();
             txtTime.BringToFront();
 
@@ -100,12 +100,11 @@ namespace FallingObjectsLinhH
                 lblHeight.Text = "Error, please enter a valid value";
 
             }
-
-            // Convert from string to a double
-            double time = double.Parse(txtTime.Text);
-           
+            else
             {
-                
+                // Convert from string to a double
+                double time = double.Parse(txtTime.Text);
+
                 // Formula for falling object
                 double Answer = 100 - (0.5 * 9.81 * Math.Pow(time, 2));
 
@@ -115,12 +114,11 @@ namespace FallingObjectsLinhH
                 Answer = Answer / 100;
 
                 if (Answer > 0)
-
-                // Change the text
-                lblHeight.Text = Convert.ToString(Answer) + "m";
-
+                {
+                    // Change the text
+                    lblHeight.Text = Convert.ToString(Answer) + "m";
+                }
                 else
-
                 {
                     // Displays reaching the ground already
                     lblHeight.Text = "It already hit the ground!";
