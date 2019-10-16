@@ -37,6 +37,17 @@
             this.lblExtraLarge = new System.Windows.Forms.Label();
             this.lblLarge = new System.Windows.Forms.Label();
             this.lblSmall = new System.Windows.Forms.Label();
+            this.grbTotal = new System.Windows.Forms.GroupBox();
+            this.lblTipsAnswer = new System.Windows.Forms.Label();
+            this.lblTips = new System.Windows.Forms.Label();
+            this.lblDonationAnswer = new System.Windows.Forms.Label();
+            this.lblDonation = new System.Windows.Forms.Label();
+            this.lblTotalAnswer = new System.Windows.Forms.Label();
+            this.lblTaxAnswer = new System.Windows.Forms.Label();
+            this.lblSubtotalAnswer = new System.Windows.Forms.Label();
+            this.lblTotal = new System.Windows.Forms.Label();
+            this.lblTax = new System.Windows.Forms.Label();
+            this.lblSubtotal = new System.Windows.Forms.Label();
             this.grbToppings = new System.Windows.Forms.GroupBox();
             this.nudToppings = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
@@ -55,13 +66,6 @@
             this.lblNoDelivery = new System.Windows.Forms.Label();
             this.lblDelivery = new System.Windows.Forms.Label();
             this.btnConfirm = new System.Windows.Forms.Button();
-            this.grbTotal = new System.Windows.Forms.GroupBox();
-            this.lblTotalAnswer = new System.Windows.Forms.Label();
-            this.lblTaxAnswer = new System.Windows.Forms.Label();
-            this.lblSubtotalAnswer = new System.Windows.Forms.Label();
-            this.lblTotal = new System.Windows.Forms.Label();
-            this.lblTax = new System.Windows.Forms.Label();
-            this.lblSubtotal = new System.Windows.Forms.Label();
             this.grbTax = new System.Windows.Forms.GroupBox();
             this.nudTax = new System.Windows.Forms.NumericUpDown();
             this.lblGstTax = new System.Windows.Forms.Label();
@@ -71,20 +75,36 @@
             this.picConfirm = new System.Windows.Forms.PictureBox();
             this.picPizzaNext = new System.Windows.Forms.PictureBox();
             this.picPizza = new System.Windows.Forms.PictureBox();
+            this.grbDonation = new System.Windows.Forms.GroupBox();
+            this.lblYesDonation = new System.Windows.Forms.Label();
+            this.lblNoDonation = new System.Windows.Forms.Label();
+            this.nudDonation = new System.Windows.Forms.NumericUpDown();
+            this.lblDonationQuestion = new System.Windows.Forms.Label();
+            this.grbTips = new System.Windows.Forms.GroupBox();
+            this.lblThreeDollarTip = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.nudTips = new System.Windows.Forms.NumericUpDown();
+            this.lblOneDollarTip = new System.Windows.Forms.Label();
+            this.lblNoTip = new System.Windows.Forms.Label();
+            this.lblTipsQuestion = new System.Windows.Forms.Label();
             this.grbSize.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudSize)).BeginInit();
+            this.grbTotal.SuspendLayout();
             this.grbToppings.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudToppings)).BeginInit();
             this.grbSoda.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudSoda)).BeginInit();
             this.grbDelivery.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudDelivery)).BeginInit();
-            this.grbTotal.SuspendLayout();
             this.grbTax.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudTax)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picConfirm)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPizzaNext)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPizza)).BeginInit();
+            this.grbDonation.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudDonation)).BeginInit();
+            this.grbTips.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudTips)).BeginInit();
             this.SuspendLayout();
             // 
             // lblCompanyName
@@ -190,6 +210,125 @@
             this.lblSmall.TabIndex = 5;
             this.lblSmall.Text = "1 = Medium ($6.99)";
             this.lblSmall.Click += new System.EventHandler(this.Label1_Click);
+            // 
+            // grbTotal
+            // 
+            this.grbTotal.Controls.Add(this.lblTipsAnswer);
+            this.grbTotal.Controls.Add(this.lblTips);
+            this.grbTotal.Controls.Add(this.lblDonationAnswer);
+            this.grbTotal.Controls.Add(this.lblDonation);
+            this.grbTotal.Controls.Add(this.lblTotalAnswer);
+            this.grbTotal.Controls.Add(this.lblTaxAnswer);
+            this.grbTotal.Controls.Add(this.lblSubtotalAnswer);
+            this.grbTotal.Controls.Add(this.lblTotal);
+            this.grbTotal.Controls.Add(this.lblTax);
+            this.grbTotal.Controls.Add(this.lblSubtotal);
+            this.grbTotal.Location = new System.Drawing.Point(255, 129);
+            this.grbTotal.Name = "grbTotal";
+            this.grbTotal.Size = new System.Drawing.Size(301, 175);
+            this.grbTotal.TabIndex = 11;
+            this.grbTotal.TabStop = false;
+            this.grbTotal.Text = "Reciept";
+            // 
+            // lblTipsAnswer
+            // 
+            this.lblTipsAnswer.AutoSize = true;
+            this.lblTipsAnswer.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTipsAnswer.Location = new System.Drawing.Point(145, 90);
+            this.lblTipsAnswer.Name = "lblTipsAnswer";
+            this.lblTipsAnswer.Size = new System.Drawing.Size(70, 25);
+            this.lblTipsAnswer.TabIndex = 9;
+            this.lblTipsAnswer.Text = "label2";
+            // 
+            // lblTips
+            // 
+            this.lblTips.AutoSize = true;
+            this.lblTips.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTips.Location = new System.Drawing.Point(74, 90);
+            this.lblTips.Name = "lblTips";
+            this.lblTips.Size = new System.Drawing.Size(59, 25);
+            this.lblTips.TabIndex = 8;
+            this.lblTips.Text = "Tips:";
+            // 
+            // lblDonationAnswer
+            // 
+            this.lblDonationAnswer.AutoSize = true;
+            this.lblDonationAnswer.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDonationAnswer.Location = new System.Drawing.Point(145, 65);
+            this.lblDonationAnswer.Name = "lblDonationAnswer";
+            this.lblDonationAnswer.Size = new System.Drawing.Size(70, 25);
+            this.lblDonationAnswer.TabIndex = 7;
+            this.lblDonationAnswer.Text = "label2";
+            // 
+            // lblDonation
+            // 
+            this.lblDonation.AutoSize = true;
+            this.lblDonation.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDonation.Location = new System.Drawing.Point(29, 65);
+            this.lblDonation.Name = "lblDonation";
+            this.lblDonation.Size = new System.Drawing.Size(104, 25);
+            this.lblDonation.TabIndex = 6;
+            this.lblDonation.Text = "Donation:";
+            // 
+            // lblTotalAnswer
+            // 
+            this.lblTotalAnswer.AutoSize = true;
+            this.lblTotalAnswer.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalAnswer.Location = new System.Drawing.Point(146, 130);
+            this.lblTotalAnswer.Name = "lblTotalAnswer";
+            this.lblTotalAnswer.Size = new System.Drawing.Size(70, 25);
+            this.lblTotalAnswer.TabIndex = 5;
+            this.lblTotalAnswer.Text = "label2";
+            // 
+            // lblTaxAnswer
+            // 
+            this.lblTaxAnswer.AutoSize = true;
+            this.lblTaxAnswer.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTaxAnswer.Location = new System.Drawing.Point(145, 40);
+            this.lblTaxAnswer.Name = "lblTaxAnswer";
+            this.lblTaxAnswer.Size = new System.Drawing.Size(70, 25);
+            this.lblTaxAnswer.TabIndex = 4;
+            this.lblTaxAnswer.Text = "label2";
+            // 
+            // lblSubtotalAnswer
+            // 
+            this.lblSubtotalAnswer.AutoSize = true;
+            this.lblSubtotalAnswer.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSubtotalAnswer.Location = new System.Drawing.Point(145, 15);
+            this.lblSubtotalAnswer.Name = "lblSubtotalAnswer";
+            this.lblSubtotalAnswer.Size = new System.Drawing.Size(70, 25);
+            this.lblSubtotalAnswer.TabIndex = 3;
+            this.lblSubtotalAnswer.Text = "label2";
+            // 
+            // lblTotal
+            // 
+            this.lblTotal.AutoSize = true;
+            this.lblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotal.Location = new System.Drawing.Point(73, 130);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(66, 25);
+            this.lblTotal.TabIndex = 2;
+            this.lblTotal.Text = "Total:";
+            // 
+            // lblTax
+            // 
+            this.lblTax.AutoSize = true;
+            this.lblTax.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTax.Location = new System.Drawing.Point(79, 40);
+            this.lblTax.Name = "lblTax";
+            this.lblTax.Size = new System.Drawing.Size(54, 25);
+            this.lblTax.TabIndex = 1;
+            this.lblTax.Text = "Tax:";
+            // 
+            // lblSubtotal
+            // 
+            this.lblSubtotal.AutoSize = true;
+            this.lblSubtotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSubtotal.Location = new System.Drawing.Point(51, 16);
+            this.lblSubtotal.Name = "lblSubtotal";
+            this.lblSubtotal.Size = new System.Drawing.Size(82, 24);
+            this.lblSubtotal.TabIndex = 0;
+            this.lblSubtotal.Text = "Subtotal:";
             // 
             // grbToppings
             // 
@@ -384,88 +523,13 @@
             // 
             // btnConfirm
             // 
-            this.btnConfirm.Location = new System.Drawing.Point(307, 244);
+            this.btnConfirm.Location = new System.Drawing.Point(550, 290);
             this.btnConfirm.Name = "btnConfirm";
-            this.btnConfirm.Size = new System.Drawing.Size(105, 26);
+            this.btnConfirm.Size = new System.Drawing.Size(168, 52);
             this.btnConfirm.TabIndex = 10;
             this.btnConfirm.Text = "Confirm order";
             this.btnConfirm.UseVisualStyleBackColor = true;
             this.btnConfirm.Click += new System.EventHandler(this.BtnConfirm_Click);
-            // 
-            // grbTotal
-            // 
-            this.grbTotal.Controls.Add(this.lblTotalAnswer);
-            this.grbTotal.Controls.Add(this.lblTaxAnswer);
-            this.grbTotal.Controls.Add(this.lblSubtotalAnswer);
-            this.grbTotal.Controls.Add(this.lblTotal);
-            this.grbTotal.Controls.Add(this.lblTax);
-            this.grbTotal.Controls.Add(this.lblSubtotal);
-            this.grbTotal.Location = new System.Drawing.Point(255, 129);
-            this.grbTotal.Name = "grbTotal";
-            this.grbTotal.Size = new System.Drawing.Size(301, 175);
-            this.grbTotal.TabIndex = 11;
-            this.grbTotal.TabStop = false;
-            this.grbTotal.Text = "Reciept";
-            // 
-            // lblTotalAnswer
-            // 
-            this.lblTotalAnswer.AutoSize = true;
-            this.lblTotalAnswer.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalAnswer.Location = new System.Drawing.Point(160, 136);
-            this.lblTotalAnswer.Name = "lblTotalAnswer";
-            this.lblTotalAnswer.Size = new System.Drawing.Size(70, 25);
-            this.lblTotalAnswer.TabIndex = 5;
-            this.lblTotalAnswer.Text = "label2";
-            // 
-            // lblTaxAnswer
-            // 
-            this.lblTaxAnswer.AutoSize = true;
-            this.lblTaxAnswer.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTaxAnswer.Location = new System.Drawing.Point(160, 79);
-            this.lblTaxAnswer.Name = "lblTaxAnswer";
-            this.lblTaxAnswer.Size = new System.Drawing.Size(70, 25);
-            this.lblTaxAnswer.TabIndex = 4;
-            this.lblTaxAnswer.Text = "label2";
-            // 
-            // lblSubtotalAnswer
-            // 
-            this.lblSubtotalAnswer.AutoSize = true;
-            this.lblSubtotalAnswer.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSubtotalAnswer.Location = new System.Drawing.Point(160, 34);
-            this.lblSubtotalAnswer.Name = "lblSubtotalAnswer";
-            this.lblSubtotalAnswer.Size = new System.Drawing.Size(70, 25);
-            this.lblSubtotalAnswer.TabIndex = 3;
-            this.lblSubtotalAnswer.Text = "label2";
-            // 
-            // lblTotal
-            // 
-            this.lblTotal.AutoSize = true;
-            this.lblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotal.Location = new System.Drawing.Point(72, 136);
-            this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(66, 25);
-            this.lblTotal.TabIndex = 2;
-            this.lblTotal.Text = "Total:";
-            // 
-            // lblTax
-            // 
-            this.lblTax.AutoSize = true;
-            this.lblTax.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTax.Location = new System.Drawing.Point(84, 79);
-            this.lblTax.Name = "lblTax";
-            this.lblTax.Size = new System.Drawing.Size(54, 25);
-            this.lblTax.TabIndex = 1;
-            this.lblTax.Text = "Tax:";
-            // 
-            // lblSubtotal
-            // 
-            this.lblSubtotal.AutoSize = true;
-            this.lblSubtotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSubtotal.Location = new System.Drawing.Point(56, 35);
-            this.lblSubtotal.Name = "lblSubtotal";
-            this.lblSubtotal.Size = new System.Drawing.Size(82, 24);
-            this.lblSubtotal.TabIndex = 0;
-            this.lblSubtotal.Text = "Subtotal:";
             // 
             // grbTax
             // 
@@ -521,7 +585,7 @@
             // 
             // btnRefresh
             // 
-            this.btnRefresh.Location = new System.Drawing.Point(344, 310);
+            this.btnRefresh.Location = new System.Drawing.Point(314, 333);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(105, 26);
             this.btnRefresh.TabIndex = 12;
@@ -532,9 +596,9 @@
             // picConfirm
             // 
             this.picConfirm.Image = global::PizzaOrderLinhH.Properties.Resources.confirm;
-            this.picConfirm.Location = new System.Drawing.Point(1, -7);
+            this.picConfirm.Location = new System.Drawing.Point(-28, -51);
             this.picConfirm.Name = "picConfirm";
-            this.picConfirm.Size = new System.Drawing.Size(803, 461);
+            this.picConfirm.Size = new System.Drawing.Size(980, 558);
             this.picConfirm.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picConfirm.TabIndex = 14;
             this.picConfirm.TabStop = false;
@@ -559,16 +623,142 @@
             this.picPizza.TabIndex = 2;
             this.picPizza.TabStop = false;
             // 
+            // grbDonation
+            // 
+            this.grbDonation.Controls.Add(this.lblYesDonation);
+            this.grbDonation.Controls.Add(this.lblNoDonation);
+            this.grbDonation.Controls.Add(this.nudDonation);
+            this.grbDonation.Controls.Add(this.lblDonationQuestion);
+            this.grbDonation.Location = new System.Drawing.Point(258, 245);
+            this.grbDonation.Name = "grbDonation";
+            this.grbDonation.Size = new System.Drawing.Size(223, 100);
+            this.grbDonation.TabIndex = 15;
+            this.grbDonation.TabStop = false;
+            this.grbDonation.Text = "Donation";
+            // 
+            // lblYesDonation
+            // 
+            this.lblYesDonation.AutoSize = true;
+            this.lblYesDonation.Location = new System.Drawing.Point(25, 70);
+            this.lblYesDonation.Name = "lblYesDonation";
+            this.lblYesDonation.Size = new System.Drawing.Size(43, 13);
+            this.lblYesDonation.TabIndex = 11;
+            this.lblYesDonation.Text = "1 = Yes";
+            // 
+            // lblNoDonation
+            // 
+            this.lblNoDonation.AutoSize = true;
+            this.lblNoDonation.Location = new System.Drawing.Point(25, 49);
+            this.lblNoDonation.Name = "lblNoDonation";
+            this.lblNoDonation.Size = new System.Drawing.Size(39, 13);
+            this.lblNoDonation.TabIndex = 11;
+            this.lblNoDonation.Text = "0 = No";
+            // 
+            // nudDonation
+            // 
+            this.nudDonation.Location = new System.Drawing.Point(140, 58);
+            this.nudDonation.Maximum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nudDonation.Name = "nudDonation";
+            this.nudDonation.Size = new System.Drawing.Size(31, 20);
+            this.nudDonation.TabIndex = 11;
+            // 
+            // lblDonationQuestion
+            // 
+            this.lblDonationQuestion.AutoSize = true;
+            this.lblDonationQuestion.Location = new System.Drawing.Point(15, 17);
+            this.lblDonationQuestion.Name = "lblDonationQuestion";
+            this.lblDonationQuestion.Size = new System.Drawing.Size(179, 26);
+            this.lblDonationQuestion.TabIndex = 11;
+            this.lblDonationQuestion.Text = "Do you want to donate one dollar to \r\nShepard\'s Hope?";
+            // 
+            // grbTips
+            // 
+            this.grbTips.Controls.Add(this.lblThreeDollarTip);
+            this.grbTips.Controls.Add(this.label2);
+            this.grbTips.Controls.Add(this.nudTips);
+            this.grbTips.Controls.Add(this.lblOneDollarTip);
+            this.grbTips.Controls.Add(this.lblNoTip);
+            this.grbTips.Controls.Add(this.lblTipsQuestion);
+            this.grbTips.Location = new System.Drawing.Point(258, 351);
+            this.grbTips.Name = "grbTips";
+            this.grbTips.Size = new System.Drawing.Size(223, 87);
+            this.grbTips.TabIndex = 11;
+            this.grbTips.TabStop = false;
+            this.grbTips.Text = "Tips";
+            // 
+            // lblThreeDollarTip
+            // 
+            this.lblThreeDollarTip.AutoSize = true;
+            this.lblThreeDollarTip.Location = new System.Drawing.Point(118, 62);
+            this.lblThreeDollarTip.Name = "lblThreeDollarTip";
+            this.lblThreeDollarTip.Size = new System.Drawing.Size(76, 13);
+            this.lblThreeDollarTip.TabIndex = 12;
+            this.lblThreeDollarTip.Text = "3 = ($3.00 Tip)";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(13, 62);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(76, 13);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "2 = ($2.00 Tip)";
+            // 
+            // nudTips
+            // 
+            this.nudTips.Location = new System.Drawing.Point(130, 14);
+            this.nudTips.Maximum = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            this.nudTips.Name = "nudTips";
+            this.nudTips.Size = new System.Drawing.Size(31, 20);
+            this.nudTips.TabIndex = 10;
+            // 
+            // lblOneDollarTip
+            // 
+            this.lblOneDollarTip.AutoSize = true;
+            this.lblOneDollarTip.Location = new System.Drawing.Point(118, 38);
+            this.lblOneDollarTip.Name = "lblOneDollarTip";
+            this.lblOneDollarTip.Size = new System.Drawing.Size(76, 13);
+            this.lblOneDollarTip.TabIndex = 6;
+            this.lblOneDollarTip.Text = "1 = ($1.00 Tip)";
+            // 
+            // lblNoTip
+            // 
+            this.lblNoTip.AutoSize = true;
+            this.lblNoTip.Location = new System.Drawing.Point(15, 38);
+            this.lblNoTip.Name = "lblNoTip";
+            this.lblNoTip.Size = new System.Drawing.Size(57, 13);
+            this.lblNoTip.TabIndex = 5;
+            this.lblNoTip.Text = "0 = No Tip";
+            // 
+            // lblTipsQuestion
+            // 
+            this.lblTipsQuestion.AutoSize = true;
+            this.lblTipsQuestion.Location = new System.Drawing.Point(6, 16);
+            this.lblTipsQuestion.Name = "lblTipsQuestion";
+            this.lblTipsQuestion.Size = new System.Drawing.Size(115, 13);
+            this.lblTipsQuestion.TabIndex = 4;
+            this.lblTipsQuestion.Text = "Feel free to leave a tip!";
+            // 
             // frmPizzaOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.grbTips);
+            this.Controls.Add(this.grbDonation);
             this.Controls.Add(this.picConfirm);
             this.Controls.Add(this.picPizzaNext);
             this.Controls.Add(this.btnRefresh);
-            this.Controls.Add(this.grbTax);
             this.Controls.Add(this.grbTotal);
+            this.Controls.Add(this.grbTax);
             this.Controls.Add(this.btnConfirm);
             this.Controls.Add(this.grbDelivery);
             this.Controls.Add(this.grbSoda);
@@ -583,6 +773,8 @@
             this.grbSize.ResumeLayout(false);
             this.grbSize.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudSize)).EndInit();
+            this.grbTotal.ResumeLayout(false);
+            this.grbTotal.PerformLayout();
             this.grbToppings.ResumeLayout(false);
             this.grbToppings.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudToppings)).EndInit();
@@ -592,14 +784,18 @@
             this.grbDelivery.ResumeLayout(false);
             this.grbDelivery.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudDelivery)).EndInit();
-            this.grbTotal.ResumeLayout(false);
-            this.grbTotal.PerformLayout();
             this.grbTax.ResumeLayout(false);
             this.grbTax.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudTax)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picConfirm)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPizzaNext)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPizza)).EndInit();
+            this.grbDonation.ResumeLayout(false);
+            this.grbDonation.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudDonation)).EndInit();
+            this.grbTips.ResumeLayout(false);
+            this.grbTips.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudTips)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -650,6 +846,22 @@
         private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.PictureBox picPizzaNext;
         private System.Windows.Forms.PictureBox picConfirm;
+        private System.Windows.Forms.GroupBox grbDonation;
+        private System.Windows.Forms.Label lblYesDonation;
+        private System.Windows.Forms.Label lblNoDonation;
+        private System.Windows.Forms.NumericUpDown nudDonation;
+        private System.Windows.Forms.Label lblDonationQuestion;
+        private System.Windows.Forms.Label lblDonationAnswer;
+        private System.Windows.Forms.Label lblDonation;
+        private System.Windows.Forms.Label lblTipsAnswer;
+        private System.Windows.Forms.Label lblTips;
+        private System.Windows.Forms.GroupBox grbTips;
+        private System.Windows.Forms.Label lblThreeDollarTip;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.NumericUpDown nudTips;
+        private System.Windows.Forms.Label lblOneDollarTip;
+        private System.Windows.Forms.Label lblNoTip;
+        private System.Windows.Forms.Label lblTipsQuestion;
     }
 }
 

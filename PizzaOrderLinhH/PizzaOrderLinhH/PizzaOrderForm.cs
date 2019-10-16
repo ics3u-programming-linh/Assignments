@@ -1,4 +1,12 @@
-﻿using System;
+﻿/*
+ * Created by: Linh Ho
+ * Created on: October 13th, 2019
+ * Created for: ICS3U Programming
+ * Assignment #3b - Pizza Order Form
+ * This program takes the order of the user and calculates the subtotal, tax and final total.
+*/
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -26,6 +34,13 @@ namespace PizzaOrderLinhH
         const double NO_SODA = 0;
         const double YES_DELIVERY = 3.00;
         const double NO_DELIVERY = 0;
+        const double YES_DONATION = 1.00;
+        const double NO_DONATION = 0;
+        const double NO_TIP = 0;
+        const double ONE_TIP = 1.00;
+        const double TWO_TIP = 2.00;
+        const double THREE_TIP = 3.00;
+       
 
         public frmPizzaOrder()
         {
@@ -46,6 +61,8 @@ namespace PizzaOrderLinhH
             btnRefresh.Hide();
             picPizzaNext.Hide();
             picConfirm.Hide();
+            grbDonation.Hide();
+            grbTips.Hide();
         }
 
         private void BtnStart_Click(object sender, EventArgs e)
@@ -63,10 +80,10 @@ namespace PizzaOrderLinhH
             this.grbSoda.Show();
             this.grbDelivery.Show();
             this.btnConfirm.Show();
-            grbTax.Show();
-            picPizzaNext.Show();
-
-            
+            this.grbTax.Show();
+            this.picPizzaNext.Show();
+            this.grbDonation.Show();
+            this.grbTips.Show();
 
             // Change the text
             lblWelcome.Text = "Welcome to Von Dough's Pizza!";
@@ -81,7 +98,7 @@ namespace PizzaOrderLinhH
         private void BtnConfirm_Click(object sender, EventArgs e)
         {
             // declare the variables
-            double size, toppings, soda, delivery, subtotal, tax, totalCost;
+            double size, toppings, soda, delivery, donation, tips, subtotal, tax, totalCost;
 
             // Display the groupbox and buttons
             grbTotal.Show();
@@ -96,6 +113,8 @@ namespace PizzaOrderLinhH
             grbTax.Hide();
             btnConfirm.Hide();
             picPizzaNext.Hide();
+            grbDonation.Hide();
+            grbTips.Hide();
 
             // Change the text
             lblWelcome.Text = "Thanks for ordering at Von Dough's pizza!";
@@ -152,6 +171,40 @@ namespace PizzaOrderLinhH
                 delivery = YES_DELIVERY;
             }
 
+            // User chooses if they want to donate or not
+            if (nudDonation.Value == 0)
+            {
+                donation = NO_DONATION;
+            } 
+            else
+            {
+                donation = YES_DONATION;
+            }
+
+            // Display the donation
+            lblDonationAnswer.Text = String.Format("${0:0.00}", donation);
+
+            // User chooses if they want to tip money 
+            if (nudTips.Value == 0)
+            {
+                tips = NO_TIP;
+            }
+            else if (nudTips.Value == 1)
+            {
+                tips = ONE_TIP;
+            }
+            else if (nudTips.Value == 2)
+            {
+                tips = TWO_TIP;
+            }
+            else
+            {
+                tips = THREE_TIP;
+            }
+
+            // Display the tip
+            lblTipsAnswer.Text = String.Format("${0:0.00}", tips);
+
             // Calculate and display the subtotal of pizza
             subtotal = size + toppings + soda + delivery;
 
@@ -173,9 +226,10 @@ namespace PizzaOrderLinhH
             lblTaxAnswer.Text = String.Format("${0:0.00}", tax);
 
             // Calculate and display the final total
-            totalCost = tax + subtotal;
+            totalCost = tax + subtotal + donation + tips;
 
             lblTotalAnswer.Text = String.Format("${0:0.00}", totalCost);
+
         }
 
         private void BtnRefresh_Click(object sender, EventArgs e)
@@ -185,7 +239,7 @@ namespace PizzaOrderLinhH
             grbTotal.Hide();
             btnRefresh.Hide();
             picConfirm.Hide();
-
+            
             // Show images, labels and buttons
             this.grbSize.Show();
             this.grbToppings.Show();
@@ -195,6 +249,8 @@ namespace PizzaOrderLinhH
             this.grbTax.Show();
             this.lblWelcome.Show();
             this.picPizzaNext.Show();
+            this.grbDonation.Show();
+            this.grbTips.Show();
 
             // Change the text
             lblWelcome.Text = "Welcome to Von Dough's Pizza!";
