@@ -32,6 +32,7 @@
             this.lblSimplified = new System.Windows.Forms.Label();
             this.btnStart = new System.Windows.Forms.Button();
             this.grbMain = new System.Windows.Forms.GroupBox();
+            this.picBackground = new System.Windows.Forms.PictureBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.mniNewGame = new System.Windows.Forms.ToolStripMenuItem();
             this.mniExit = new System.Windows.Forms.ToolStripMenuItem();
@@ -55,7 +56,6 @@
             this.picMultipleCards = new System.Windows.Forms.PictureBox();
             this.picCompCard5 = new System.Windows.Forms.PictureBox();
             this.lblCompCard1 = new System.Windows.Forms.Label();
-            this.picBackground = new System.Windows.Forms.PictureBox();
             this.picCompCard = new System.Windows.Forms.PictureBox();
             this.picCompCard2 = new System.Windows.Forms.PictureBox();
             this.picCompCard3 = new System.Windows.Forms.PictureBox();
@@ -67,13 +67,16 @@
             this.lblPlayerWinScore = new System.Windows.Forms.Label();
             this.lblDealerWin = new System.Windows.Forms.Label();
             this.lblDealerWinScore = new System.Windows.Forms.Label();
+            this.lblGamesPlayed = new System.Windows.Forms.Label();
+            this.lblTotalGames = new System.Windows.Forms.Label();
+            this.grbGamesPlayed = new System.Windows.Forms.GroupBox();
             this.grbMain.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picBackground)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.grbScore.SuspendLayout();
             this.grbHitOrStand.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picMultipleCards)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCompCard5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picBackground)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCompCard)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCompCard2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCompCard3)).BeginInit();
@@ -81,6 +84,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.picPlayerCard)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPlayerCard2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPlayerCard3)).BeginInit();
+            this.grbGamesPlayed.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblSimplified
@@ -88,7 +92,7 @@
             this.lblSimplified.AutoSize = true;
             this.lblSimplified.BackColor = System.Drawing.SystemColors.ControlLight;
             this.lblSimplified.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSimplified.Location = new System.Drawing.Point(71, 16);
+            this.lblSimplified.Location = new System.Drawing.Point(121, 16);
             this.lblSimplified.Name = "lblSimplified";
             this.lblSimplified.Size = new System.Drawing.Size(591, 108);
             this.lblSimplified.TabIndex = 0;
@@ -97,7 +101,7 @@
             // btnStart
             // 
             this.btnStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStart.Location = new System.Drawing.Point(286, 127);
+            this.btnStart.Location = new System.Drawing.Point(348, 127);
             this.btnStart.Name = "btnStart";
             this.btnStart.Size = new System.Drawing.Size(120, 45);
             this.btnStart.TabIndex = 1;
@@ -117,6 +121,16 @@
             this.grbMain.TabStop = false;
             this.grbMain.Text = "Created by Linh Ho";
             // 
+            // picBackground
+            // 
+            this.picBackground.Image = global::Simplified21LinhHo.Properties.Resources.main;
+            this.picBackground.Location = new System.Drawing.Point(-16, 0);
+            this.picBackground.Name = "picBackground";
+            this.picBackground.Size = new System.Drawing.Size(958, 184);
+            this.picBackground.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picBackground.TabIndex = 2;
+            this.picBackground.TabStop = false;
+            // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -124,7 +138,7 @@
             this.mniExit});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(825, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(770, 24);
             this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -138,7 +152,7 @@
             // mniExit
             // 
             this.mniExit.Name = "mniExit";
-            this.mniExit.Size = new System.Drawing.Size(38, 20);
+            this.mniExit.Size = new System.Drawing.Size(37, 20);
             this.mniExit.Text = "Exit";
             this.mniExit.Click += new System.EventHandler(this.MniExit_Click);
             // 
@@ -161,7 +175,7 @@
             // 
             this.lblDealer.AutoSize = true;
             this.lblDealer.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDealer.Location = new System.Drawing.Point(69, 16);
+            this.lblDealer.Location = new System.Drawing.Point(68, 16);
             this.lblDealer.Name = "lblDealer";
             this.lblDealer.Size = new System.Drawing.Size(65, 24);
             this.lblDealer.TabIndex = 6;
@@ -201,7 +215,7 @@
             // btnStand
             // 
             this.btnStand.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStand.Location = new System.Drawing.Point(117, 11);
+            this.btnStand.Location = new System.Drawing.Point(102, 11);
             this.btnStand.Name = "btnStand";
             this.btnStand.Size = new System.Drawing.Size(116, 47);
             this.btnStand.TabIndex = 10;
@@ -215,7 +229,8 @@
             this.grbScore.Controls.Add(this.lblDealer);
             this.grbScore.Controls.Add(this.lblPlayerScore);
             this.grbScore.Controls.Add(this.lblPlayer);
-            this.grbScore.Location = new System.Drawing.Point(73, 235);
+            this.grbScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grbScore.Location = new System.Drawing.Point(90, 283);
             this.grbScore.Name = "grbScore";
             this.grbScore.Size = new System.Drawing.Size(143, 85);
             this.grbScore.TabIndex = 11;
@@ -225,9 +240,9 @@
             // 
             this.grbHitOrStand.Controls.Add(this.btnStand);
             this.grbHitOrStand.Controls.Add(this.btnHit);
-            this.grbHitOrStand.Location = new System.Drawing.Point(12, 339);
+            this.grbHitOrStand.Location = new System.Drawing.Point(39, 385);
             this.grbHitOrStand.Name = "grbHitOrStand";
-            this.grbHitOrStand.Size = new System.Drawing.Size(248, 64);
+            this.grbHitOrStand.Size = new System.Drawing.Size(226, 68);
             this.grbHitOrStand.TabIndex = 12;
             this.grbHitOrStand.TabStop = false;
             // 
@@ -236,7 +251,7 @@
             this.lblPlayerCard1.AutoSize = true;
             this.lblPlayerCard1.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.lblPlayerCard1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPlayerCard1.Location = new System.Drawing.Point(355, 372);
+            this.lblPlayerCard1.Location = new System.Drawing.Point(341, 449);
             this.lblPlayerCard1.Name = "lblPlayerCard1";
             this.lblPlayerCard1.Size = new System.Drawing.Size(70, 25);
             this.lblPlayerCard1.TabIndex = 13;
@@ -247,7 +262,7 @@
             this.lblPlayerCard2.AutoSize = true;
             this.lblPlayerCard2.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.lblPlayerCard2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPlayerCard2.Location = new System.Drawing.Point(443, 372);
+            this.lblPlayerCard2.Location = new System.Drawing.Point(429, 449);
             this.lblPlayerCard2.Name = "lblPlayerCard2";
             this.lblPlayerCard2.Size = new System.Drawing.Size(70, 25);
             this.lblPlayerCard2.TabIndex = 14;
@@ -258,7 +273,7 @@
             this.lblPlayerCard3.AutoSize = true;
             this.lblPlayerCard3.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.lblPlayerCard3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPlayerCard3.Location = new System.Drawing.Point(529, 372);
+            this.lblPlayerCard3.Location = new System.Drawing.Point(515, 449);
             this.lblPlayerCard3.Name = "lblPlayerCard3";
             this.lblPlayerCard3.Size = new System.Drawing.Size(70, 25);
             this.lblPlayerCard3.TabIndex = 16;
@@ -269,7 +284,7 @@
             this.lblCompCard2.AutoSize = true;
             this.lblCompCard2.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.lblCompCard2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCompCard2.Location = new System.Drawing.Point(443, 268);
+            this.lblCompCard2.Location = new System.Drawing.Point(429, 345);
             this.lblCompCard2.Name = "lblCompCard2";
             this.lblCompCard2.Size = new System.Drawing.Size(70, 25);
             this.lblCompCard2.TabIndex = 17;
@@ -280,7 +295,7 @@
             this.lblCompCard3.AutoSize = true;
             this.lblCompCard3.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.lblCompCard3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCompCard3.Location = new System.Drawing.Point(529, 268);
+            this.lblCompCard3.Location = new System.Drawing.Point(515, 345);
             this.lblCompCard3.Name = "lblCompCard3";
             this.lblCompCard3.Size = new System.Drawing.Size(70, 25);
             this.lblCompCard3.TabIndex = 18;
@@ -289,7 +304,7 @@
             // btnRestart
             // 
             this.btnRestart.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRestart.Location = new System.Drawing.Point(73, 422);
+            this.btnRestart.Location = new System.Drawing.Point(605, 437);
             this.btnRestart.Name = "btnRestart";
             this.btnRestart.Size = new System.Drawing.Size(120, 47);
             this.btnRestart.TabIndex = 19;
@@ -302,7 +317,7 @@
             this.lblCompCard4.AutoSize = true;
             this.lblCompCard4.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.lblCompCard4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCompCard4.Location = new System.Drawing.Point(614, 268);
+            this.lblCompCard4.Location = new System.Drawing.Point(600, 345);
             this.lblCompCard4.Name = "lblCompCard4";
             this.lblCompCard4.Size = new System.Drawing.Size(70, 25);
             this.lblCompCard4.TabIndex = 20;
@@ -313,7 +328,7 @@
             this.lblCompCard5.AutoSize = true;
             this.lblCompCard5.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.lblCompCard5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCompCard5.Location = new System.Drawing.Point(702, 268);
+            this.lblCompCard5.Location = new System.Drawing.Point(688, 345);
             this.lblCompCard5.Name = "lblCompCard5";
             this.lblCompCard5.Size = new System.Drawing.Size(70, 25);
             this.lblCompCard5.TabIndex = 29;
@@ -322,9 +337,9 @@
             // picMultipleCards
             // 
             this.picMultipleCards.Image = global::Simplified21LinhHo.Properties.Resources.original;
-            this.picMultipleCards.Location = new System.Drawing.Point(604, 344);
+            this.picMultipleCards.Location = new System.Drawing.Point(-16, 27);
             this.picMultipleCards.Name = "picMultipleCards";
-            this.picMultipleCards.Size = new System.Drawing.Size(209, 155);
+            this.picMultipleCards.Size = new System.Drawing.Size(841, 237);
             this.picMultipleCards.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picMultipleCards.TabIndex = 30;
             this.picMultipleCards.TabStop = false;
@@ -332,7 +347,7 @@
             // picCompCard5
             // 
             this.picCompCard5.Image = global::Simplified21LinhHo.Properties.Resources.card;
-            this.picCompCard5.Location = new System.Drawing.Point(680, 235);
+            this.picCompCard5.Location = new System.Drawing.Point(666, 312);
             this.picCompCard5.Name = "picCompCard5";
             this.picCompCard5.Size = new System.Drawing.Size(73, 94);
             this.picCompCard5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -344,26 +359,16 @@
             this.lblCompCard1.AutoSize = true;
             this.lblCompCard1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCompCard1.Image = global::Simplified21LinhHo.Properties.Resources.card;
-            this.lblCompCard1.Location = new System.Drawing.Point(356, 267);
+            this.lblCompCard1.Location = new System.Drawing.Point(342, 344);
             this.lblCompCard1.Name = "lblCompCard1";
             this.lblCompCard1.Size = new System.Drawing.Size(60, 24);
             this.lblCompCard1.TabIndex = 15;
             this.lblCompCard1.Text = "label3";
             // 
-            // picBackground
-            // 
-            this.picBackground.Image = global::Simplified21LinhHo.Properties.Resources.main;
-            this.picBackground.Location = new System.Drawing.Point(-16, 0);
-            this.picBackground.Name = "picBackground";
-            this.picBackground.Size = new System.Drawing.Size(958, 184);
-            this.picBackground.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picBackground.TabIndex = 2;
-            this.picBackground.TabStop = false;
-            // 
             // picCompCard
             // 
             this.picCompCard.Image = global::Simplified21LinhHo.Properties.Resources.card;
-            this.picCompCard.Location = new System.Drawing.Point(333, 235);
+            this.picCompCard.Location = new System.Drawing.Point(319, 312);
             this.picCompCard.Name = "picCompCard";
             this.picCompCard.Size = new System.Drawing.Size(73, 94);
             this.picCompCard.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -373,7 +378,7 @@
             // picCompCard2
             // 
             this.picCompCard2.Image = global::Simplified21LinhHo.Properties.Resources.card;
-            this.picCompCard2.Location = new System.Drawing.Point(422, 235);
+            this.picCompCard2.Location = new System.Drawing.Point(408, 312);
             this.picCompCard2.Name = "picCompCard2";
             this.picCompCard2.Size = new System.Drawing.Size(73, 94);
             this.picCompCard2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -383,7 +388,7 @@
             // picCompCard3
             // 
             this.picCompCard3.Image = global::Simplified21LinhHo.Properties.Resources.card;
-            this.picCompCard3.Location = new System.Drawing.Point(511, 235);
+            this.picCompCard3.Location = new System.Drawing.Point(497, 312);
             this.picCompCard3.Name = "picCompCard3";
             this.picCompCard3.Size = new System.Drawing.Size(73, 94);
             this.picCompCard3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -393,7 +398,7 @@
             // picCompCard4
             // 
             this.picCompCard4.Image = global::Simplified21LinhHo.Properties.Resources.card;
-            this.picCompCard4.Location = new System.Drawing.Point(595, 235);
+            this.picCompCard4.Location = new System.Drawing.Point(581, 312);
             this.picCompCard4.Name = "picCompCard4";
             this.picCompCard4.Size = new System.Drawing.Size(73, 94);
             this.picCompCard4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -403,7 +408,7 @@
             // picPlayerCard
             // 
             this.picPlayerCard.Image = global::Simplified21LinhHo.Properties.Resources.card;
-            this.picPlayerCard.Location = new System.Drawing.Point(333, 339);
+            this.picPlayerCard.Location = new System.Drawing.Point(319, 416);
             this.picPlayerCard.Name = "picPlayerCard";
             this.picPlayerCard.Size = new System.Drawing.Size(73, 94);
             this.picPlayerCard.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -413,7 +418,7 @@
             // picPlayerCard2
             // 
             this.picPlayerCard2.Image = global::Simplified21LinhHo.Properties.Resources.card;
-            this.picPlayerCard2.Location = new System.Drawing.Point(422, 339);
+            this.picPlayerCard2.Location = new System.Drawing.Point(408, 416);
             this.picPlayerCard2.Name = "picPlayerCard2";
             this.picPlayerCard2.Size = new System.Drawing.Size(73, 94);
             this.picPlayerCard2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -423,7 +428,7 @@
             // picPlayerCard3
             // 
             this.picPlayerCard3.Image = global::Simplified21LinhHo.Properties.Resources.card;
-            this.picPlayerCard3.Location = new System.Drawing.Point(511, 339);
+            this.picPlayerCard3.Location = new System.Drawing.Point(497, 416);
             this.picPlayerCard3.Name = "picPlayerCard3";
             this.picPlayerCard3.Size = new System.Drawing.Size(73, 94);
             this.picPlayerCard3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -433,49 +438,83 @@
             // lblPlayerWin
             // 
             this.lblPlayerWin.AutoSize = true;
-            this.lblPlayerWin.Location = new System.Drawing.Point(286, 455);
+            this.lblPlayerWin.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPlayerWin.Location = new System.Drawing.Point(41, 484);
             this.lblPlayerWin.Name = "lblPlayerWin";
-            this.lblPlayerWin.Size = new System.Drawing.Size(93, 13);
+            this.lblPlayerWin.Size = new System.Drawing.Size(161, 24);
             this.lblPlayerWin.TabIndex = 31;
             this.lblPlayerWin.Text = "Player Win Points:";
             // 
             // lblPlayerWinScore
             // 
             this.lblPlayerWinScore.AutoSize = true;
-            this.lblPlayerWinScore.Location = new System.Drawing.Point(386, 455);
+            this.lblPlayerWinScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPlayerWinScore.Location = new System.Drawing.Point(208, 484);
             this.lblPlayerWinScore.Name = "lblPlayerWinScore";
-            this.lblPlayerWinScore.Size = new System.Drawing.Size(33, 13);
+            this.lblPlayerWinScore.Size = new System.Drawing.Size(57, 24);
             this.lblPlayerWinScore.TabIndex = 32;
             this.lblPlayerWinScore.Text = "score";
             // 
             // lblDealerWin
             // 
             this.lblDealerWin.AutoSize = true;
-            this.lblDealerWin.Location = new System.Drawing.Point(286, 477);
+            this.lblDealerWin.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDealerWin.Location = new System.Drawing.Point(41, 506);
             this.lblDealerWin.Name = "lblDealerWin";
-            this.lblDealerWin.Size = new System.Drawing.Size(95, 13);
+            this.lblDealerWin.Size = new System.Drawing.Size(164, 24);
             this.lblDealerWin.TabIndex = 33;
             this.lblDealerWin.Text = "Dealer Win Points:";
             // 
             // lblDealerWinScore
             // 
             this.lblDealerWinScore.AutoSize = true;
-            this.lblDealerWinScore.Location = new System.Drawing.Point(386, 477);
+            this.lblDealerWinScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDealerWinScore.Location = new System.Drawing.Point(208, 506);
             this.lblDealerWinScore.Name = "lblDealerWinScore";
-            this.lblDealerWinScore.Size = new System.Drawing.Size(33, 13);
+            this.lblDealerWinScore.Size = new System.Drawing.Size(57, 24);
             this.lblDealerWinScore.TabIndex = 34;
             this.lblDealerWinScore.Text = "score";
+            // 
+            // lblGamesPlayed
+            // 
+            this.lblGamesPlayed.AutoSize = true;
+            this.lblGamesPlayed.Location = new System.Drawing.Point(6, 8);
+            this.lblGamesPlayed.Name = "lblGamesPlayed";
+            this.lblGamesPlayed.Size = new System.Drawing.Size(78, 13);
+            this.lblGamesPlayed.TabIndex = 35;
+            this.lblGamesPlayed.Text = "Games Played:";
+            // 
+            // lblTotalGames
+            // 
+            this.lblTotalGames.AutoSize = true;
+            this.lblTotalGames.Location = new System.Drawing.Point(82, 8);
+            this.lblTotalGames.Name = "lblTotalGames";
+            this.lblTotalGames.Size = new System.Drawing.Size(13, 13);
+            this.lblTotalGames.TabIndex = 36;
+            this.lblTotalGames.Text = "0";
+            // 
+            // grbGamesPlayed
+            // 
+            this.grbGamesPlayed.Controls.Add(this.lblGamesPlayed);
+            this.grbGamesPlayed.Controls.Add(this.lblTotalGames);
+            this.grbGamesPlayed.Location = new System.Drawing.Point(0, 560);
+            this.grbGamesPlayed.Name = "grbGamesPlayed";
+            this.grbGamesPlayed.Size = new System.Drawing.Size(148, 24);
+            this.grbGamesPlayed.TabIndex = 37;
+            this.grbGamesPlayed.TabStop = false;
             // 
             // frmSimplified21
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(825, 511);
+            this.ClientSize = new System.Drawing.Size(770, 587);
+            this.Controls.Add(this.grbGamesPlayed);
             this.Controls.Add(this.lblDealerWinScore);
+            this.Controls.Add(this.grbScore);
+            this.Controls.Add(this.picMultipleCards);
             this.Controls.Add(this.lblDealerWin);
             this.Controls.Add(this.lblPlayerWinScore);
             this.Controls.Add(this.lblPlayerWin);
-            this.Controls.Add(this.picMultipleCards);
             this.Controls.Add(this.lblCompCard5);
             this.Controls.Add(this.picCompCard5);
             this.Controls.Add(this.lblCompCard4);
@@ -487,7 +526,6 @@
             this.Controls.Add(this.lblCompCard1);
             this.Controls.Add(this.lblPlayerCard2);
             this.Controls.Add(this.lblPlayerCard1);
-            this.Controls.Add(this.grbScore);
             this.Controls.Add(this.grbMain);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.picCompCard);
@@ -502,6 +540,7 @@
             this.Text = "Simplified 21 by Linh Ho";
             this.grbMain.ResumeLayout(false);
             this.grbMain.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picBackground)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.grbScore.ResumeLayout(false);
@@ -509,7 +548,6 @@
             this.grbHitOrStand.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picMultipleCards)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCompCard5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picBackground)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCompCard)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCompCard2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCompCard3)).EndInit();
@@ -517,6 +555,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.picPlayerCard)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPlayerCard2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPlayerCard3)).EndInit();
+            this.grbGamesPlayed.ResumeLayout(false);
+            this.grbGamesPlayed.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -562,6 +602,9 @@
         private System.Windows.Forms.Label lblPlayerWinScore;
         private System.Windows.Forms.Label lblDealerWin;
         private System.Windows.Forms.Label lblDealerWinScore;
+        private System.Windows.Forms.Label lblGamesPlayed;
+        private System.Windows.Forms.Label lblTotalGames;
+        private System.Windows.Forms.GroupBox grbGamesPlayed;
     }
 }
 

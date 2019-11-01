@@ -25,9 +25,13 @@ namespace Simplified21LinhHo
         // declare variables and constants
         int playerScore;
         int computerScore;
+        int playerWinCount;
+        int dealerWinCount;
+        int gamesPlayedCount;
         const int MIN_NUM = 1;
         const int MAX_NUM = 11;
         const int BLACKJACK = 21;
+        
         public frmSimplified21()
         {
             InitializeComponent();
@@ -53,6 +57,7 @@ namespace Simplified21LinhHo
             picCompCard5.Hide();
             lblCompCard5.Hide();
             picMultipleCards.Hide();
+
             // Call New Game procedure
             NewGame();
         }
@@ -80,6 +85,11 @@ namespace Simplified21LinhHo
             picCompCard5.Hide();
             lblCompCard5.Hide();
             picMultipleCards.Hide();
+            lblPlayerWin.Hide();
+            lblPlayerWinScore.Hide();
+            lblDealerWin.Hide();
+            lblDealerWinScore.Hide();
+            grbGamesPlayed.Hide();
 
             // Show labels, buttons and etc.
             grbMain.Show();
@@ -114,6 +124,10 @@ namespace Simplified21LinhHo
             picCompCard4.Hide();
             picCompCard5.Hide();
             picPlayerCard3.Hide();
+            lblPlayerWin.Hide();
+            lblPlayerWinScore.Hide();
+            lblDealerWin.Hide();
+            lblDealerWinScore.Hide();
 
             // Show labels, buttons and etc
             grbHitOrStand.Show();
@@ -125,6 +139,7 @@ namespace Simplified21LinhHo
             picPlayerCard.Show();
             picPlayerCard2.Show();
             picMultipleCards.Show();
+            grbGamesPlayed.Show();
 
             // declare variables
             int randomPlayerCard;
@@ -158,7 +173,7 @@ namespace Simplified21LinhHo
 
         private void BtnHit_Click(object sender, EventArgs e)
         {
-            // Show labels, pics
+            // Show labels, pics,
             lblPlayerCard3.Show();
             picPlayerCard3.Show();
 
@@ -181,21 +196,64 @@ namespace Simplified21LinhHo
             {
                 // Display a message box indicating that user lost and disable buttons
                 MessageBox.Show("You lose. You went over 21!");
+
+                // Disable buttons
                 btnHit.Enabled = false;
                 btnStand.Enabled = false;
 
                 // Display restart button
                 btnRestart.Show();
+
+                // Show points of win count of player and computer
+                lblDealerWinScore.Show();
+                lblPlayerWinScore.Show();
+                lblPlayerWin.Show();
+                lblDealerWin.Show();
+
+                // Increment the games played
+                gamesPlayedCount++;
+
+                // Display games played
+                lblTotalGames.Text = Convert.ToString(gamesPlayedCount);
+
+                // Increment the dealer win count score
+                dealerWinCount++;
+
+                // Display the win count score
+                lblDealerWinScore.Text = Convert.ToString(dealerWinCount);
+                lblPlayerWinScore.Text = Convert.ToString(playerWinCount);
+
             }
             else if (playerScore == BLACKJACK)
             {
                 // Display a message box indicating that user won and disable buttons
                 MessageBox.Show("You win, blackjack!");
+
+                // Disable buttons
                 btnHit.Enabled = false;
                 btnStand.Enabled = false;
 
                 // Display restart button
                 btnRestart.Show();
+
+                // Show points of win count of player and computer
+                lblDealerWinScore.Show();
+                lblPlayerWinScore.Show();
+                lblPlayerWin.Show();
+                lblDealerWin.Show();
+
+                // Increment the player win count score
+                playerWinCount++;
+
+                // Display the win count score
+                lblDealerWinScore.Text = Convert.ToString(dealerWinCount);
+                lblPlayerWinScore.Text = Convert.ToString(playerWinCount);
+
+                // Increment the games played
+                gamesPlayedCount++;
+
+                // Display games played
+                lblTotalGames.Text = Convert.ToString(gamesPlayedCount);
             }
             else
             {
@@ -213,6 +271,10 @@ namespace Simplified21LinhHo
             // Show labels, pics
             lblCompCard2.Show();
             picCompCard2.Show();
+            lblDealerWinScore.Show();
+            lblPlayerWinScore.Show();
+            lblPlayerWin.Show();
+            lblDealerWin.Show();
 
             // Hide labels, pics
             lblCompCard3.Hide();
@@ -237,7 +299,11 @@ namespace Simplified21LinhHo
             // Assign random computer card number to the labels
             lblCompCard2.Text = Convert.ToString(randomCompCardTwo);
             lblDealerScore.Text = Convert.ToString(computerScore);
-            
+
+            // Display the win count score
+            lblDealerWinScore.Text = Convert.ToString(dealerWinCount);
+            lblPlayerWinScore.Text = Convert.ToString(playerWinCount);
+
             // Check to see if computer score is less than 17
             if (computerScore < 17)
             {
@@ -250,9 +316,19 @@ namespace Simplified21LinhHo
                 // Calculate the computer score
                 computerScore = computerScore + randomCompCardThree;
 
+                // Show points of win count of player and computer
+                lblDealerWinScore.Show();
+                lblPlayerWinScore.Show();
+                lblPlayerWin.Show();
+                lblDealerWin.Show();
+
                 // Display score and label
                 lblCompCard3.Text = Convert.ToString(randomCompCardThree);
                 lblDealerScore.Text = Convert.ToString(computerScore);
+
+                // Display the win count score
+                lblDealerWinScore.Text = Convert.ToString(dealerWinCount);
+                lblPlayerWinScore.Text = Convert.ToString(playerWinCount);
 
                 // Check again to see if computer score is less than 17
                 if (computerScore <= 17)
@@ -268,9 +344,19 @@ namespace Simplified21LinhHo
                     // Calculate the computer score
                     computerScore = computerScore + randomCompCardFour;
 
+                    // Show points of win count of player and computer
+                    lblDealerWinScore.Show();
+                    lblPlayerWinScore.Show();
+                    lblPlayerWin.Show();
+                    lblDealerWin.Show();
+
                     // Display score and label
                     lblCompCard4.Text = Convert.ToString(randomCompCardFour);
                     lblDealerScore.Text = Convert.ToString(computerScore);
+
+                    // Display the win count score
+                    lblDealerWinScore.Text = Convert.ToString(dealerWinCount);
+                    lblPlayerWinScore.Text = Convert.ToString(playerWinCount);
                 }
 
                 // Check again to see if computer score is less than 17
@@ -287,9 +373,19 @@ namespace Simplified21LinhHo
                     // Calculate the computer score
                     computerScore = computerScore + randomCompCardFive;
 
+                    // Show points of win count of player and computer
+                    lblDealerWinScore.Show();
+                    lblPlayerWinScore.Show();
+                    lblPlayerWin.Show();
+                    lblDealerWin.Show();
+
                     // Display score and label
                     lblCompCard5.Text = Convert.ToString(randomCompCardFive);
                     lblDealerScore.Text = Convert.ToString(computerScore);
+
+                    // Display the win count score
+                    lblDealerWinScore.Text = Convert.ToString(dealerWinCount);
+                    lblPlayerWinScore.Text = Convert.ToString(playerWinCount);
                 }
 
             }
@@ -302,6 +398,25 @@ namespace Simplified21LinhHo
 
                 // Display restart button
                 btnRestart.Show();
+
+                // Show points of win count of player and computer
+                lblDealerWinScore.Show();
+                lblPlayerWinScore.Show();
+                lblPlayerWin.Show();
+                lblDealerWin.Show();
+
+                // Increment the dealer win count score
+                dealerWinCount++;
+
+                // Display the win count score
+                lblDealerWinScore.Text = Convert.ToString(dealerWinCount);
+                lblPlayerWinScore.Text = Convert.ToString(playerWinCount);
+
+                // Increment the games played
+                gamesPlayedCount++;
+
+                // Display games played
+                lblTotalGames.Text = Convert.ToString(gamesPlayedCount);
             }
             else if (computerScore > 21)
             {
@@ -310,6 +425,25 @@ namespace Simplified21LinhHo
 
                 // Display restart button
                 btnRestart.Show();
+
+                // Show points of win count of player and computer
+                lblDealerWinScore.Show();
+                lblPlayerWinScore.Show();
+                lblPlayerWin.Show();
+                lblDealerWin.Show();
+
+                // Increment the player win count score
+                playerWinCount++;
+
+                // Display the win count score
+                lblDealerWinScore.Text = Convert.ToString(dealerWinCount);
+                lblPlayerWinScore.Text = Convert.ToString(playerWinCount);
+
+                // Increment the games played
+                gamesPlayedCount++;
+
+                // Display games played
+                lblTotalGames.Text = Convert.ToString(gamesPlayedCount);
             }
             else if (playerScore > 21)
             {
@@ -318,6 +452,25 @@ namespace Simplified21LinhHo
 
                 // Display restart button
                 btnRestart.Show();
+
+                // Show points of win count of player and computer
+                lblDealerWinScore.Show();
+                lblPlayerWinScore.Show();
+                lblPlayerWin.Show();
+                lblDealerWin.Show();
+
+                // Increment the dealer win count score
+                dealerWinCount++;
+
+                // Display the win count score
+                lblDealerWinScore.Text = Convert.ToString(dealerWinCount);
+                lblPlayerWinScore.Text = Convert.ToString(playerWinCount);
+
+                // Increment the games played
+                gamesPlayedCount++;
+
+                // Display games played
+                lblTotalGames.Text = Convert.ToString(gamesPlayedCount);
             }
             else if (computerScore > playerScore)
             {
@@ -326,6 +479,25 @@ namespace Simplified21LinhHo
 
                 // Display restart button
                 btnRestart.Show();
+
+                // Show points of win count of player and computer
+                lblDealerWinScore.Show();
+                lblPlayerWinScore.Show();
+                lblPlayerWin.Show();
+                lblDealerWin.Show();
+
+                // Increment the dealer win count score
+                dealerWinCount++;
+
+                // Display the win count score
+                lblDealerWinScore.Text = Convert.ToString(dealerWinCount);
+                lblPlayerWinScore.Text = Convert.ToString(playerWinCount);
+
+                // Increment the games played
+                gamesPlayedCount++;
+
+                // Display games played
+                lblTotalGames.Text = Convert.ToString(gamesPlayedCount);
             }
             else if (playerScore > computerScore)
             {
@@ -334,6 +506,25 @@ namespace Simplified21LinhHo
 
                 // Display restart button
                 btnRestart.Show();
+
+                // Show points of win count of player and computer
+                lblDealerWinScore.Show();
+                lblPlayerWinScore.Show();
+                lblPlayerWin.Show();
+                lblDealerWin.Show();
+
+                // Increment the player win count score
+                playerWinCount++;
+
+                // Display the win count score
+                lblDealerWinScore.Text = Convert.ToString(dealerWinCount);
+                lblPlayerWinScore.Text = Convert.ToString(playerWinCount);
+
+                // Increment the games played
+                gamesPlayedCount++;
+
+                // Display games played
+                lblTotalGames.Text = Convert.ToString(gamesPlayedCount);
             }
             else if (computerScore == BLACKJACK)
             {
@@ -342,6 +533,25 @@ namespace Simplified21LinhHo
 
                 // Display restart button
                 btnRestart.Show();
+
+                // Show points of win count of player and computer
+                lblDealerWinScore.Show();
+                lblPlayerWinScore.Show();
+                lblPlayerWin.Show();
+                lblDealerWin.Show();
+
+                // Increment the dealer win count score
+                dealerWinCount++;
+
+                // Display the win count score
+                lblDealerWinScore.Text = Convert.ToString(dealerWinCount);
+                lblPlayerWinScore.Text = Convert.ToString(playerWinCount);
+
+                // Increment the games played
+                gamesPlayedCount++;
+
+                // Display games played
+                lblTotalGames.Text = Convert.ToString(gamesPlayedCount);
             }
             else if (playerScore == BLACKJACK)
             {
@@ -350,6 +560,25 @@ namespace Simplified21LinhHo
 
                 // Display restart button
                 btnRestart.Show();
+
+                // Show points of win count of player and computer
+                lblDealerWinScore.Show();
+                lblPlayerWinScore.Show();
+                lblPlayerWin.Show();
+                lblDealerWin.Show();
+
+                // Increment the player win count score
+                playerWinCount++;
+
+                // Display the win count score
+                lblDealerWinScore.Text = Convert.ToString(dealerWinCount);
+                lblPlayerWinScore.Text = Convert.ToString(playerWinCount);
+
+                // Increment the games played
+                gamesPlayedCount++;
+
+                // Display games played
+                lblTotalGames.Text = Convert.ToString(gamesPlayedCount);
             }
             else
             {
@@ -358,6 +587,28 @@ namespace Simplified21LinhHo
 
                 // Display restart button
                 btnRestart.Show();
+
+                // Show points of win count of player and computer
+                lblDealerWinScore.Show();
+                lblPlayerWinScore.Show();
+                lblPlayerWin.Show();
+                lblDealerWin.Show();
+
+                // Increment the dealer win count score
+                dealerWinCount++;
+
+                // Increment the player win count score
+                playerWinCount++;
+
+                // Display the win count score
+                lblDealerWinScore.Text = Convert.ToString(dealerWinCount);
+                lblPlayerWinScore.Text = Convert.ToString(playerWinCount);
+
+                // Increment the games played
+                gamesPlayedCount++;
+
+                // Display games played
+                lblTotalGames.Text = Convert.ToString(gamesPlayedCount);
             }
 
         }
