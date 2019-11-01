@@ -165,7 +165,7 @@
             // 
             this.lblDealerScore.AutoSize = true;
             this.lblDealerScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDealerScore.Location = new System.Drawing.Point(6, 16);
+            this.lblDealerScore.Location = new System.Drawing.Point(6, 29);
             this.lblDealerScore.Name = "lblDealerScore";
             this.lblDealerScore.Size = new System.Drawing.Size(60, 24);
             this.lblDealerScore.TabIndex = 5;
@@ -175,7 +175,7 @@
             // 
             this.lblDealer.AutoSize = true;
             this.lblDealer.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDealer.Location = new System.Drawing.Point(68, 16);
+            this.lblDealer.Location = new System.Drawing.Point(68, 29);
             this.lblDealer.Name = "lblDealer";
             this.lblDealer.Size = new System.Drawing.Size(65, 24);
             this.lblDealer.TabIndex = 6;
@@ -185,7 +185,7 @@
             // 
             this.lblPlayerScore.AutoSize = true;
             this.lblPlayerScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPlayerScore.Location = new System.Drawing.Point(6, 46);
+            this.lblPlayerScore.Location = new System.Drawing.Point(6, 53);
             this.lblPlayerScore.Name = "lblPlayerScore";
             this.lblPlayerScore.Size = new System.Drawing.Size(60, 24);
             this.lblPlayerScore.TabIndex = 7;
@@ -195,7 +195,7 @@
             // 
             this.lblPlayer.AutoSize = true;
             this.lblPlayer.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPlayer.Location = new System.Drawing.Point(68, 46);
+            this.lblPlayer.Location = new System.Drawing.Point(68, 53);
             this.lblPlayer.Name = "lblPlayer";
             this.lblPlayer.Size = new System.Drawing.Size(62, 24);
             this.lblPlayer.TabIndex = 8;
@@ -230,7 +230,7 @@
             this.grbScore.Controls.Add(this.lblPlayerScore);
             this.grbScore.Controls.Add(this.lblPlayer);
             this.grbScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grbScore.Location = new System.Drawing.Point(90, 283);
+            this.grbScore.Location = new System.Drawing.Point(75, 283);
             this.grbScore.Name = "grbScore";
             this.grbScore.Size = new System.Drawing.Size(143, 85);
             this.grbScore.TabIndex = 11;

@@ -615,7 +615,7 @@ namespace Simplified21LinhHo
 
         private void BtnRestart_Click(object sender, EventArgs e)
         {
-            // loop through each object on the form and make it red
+            // loop through each object on the form
             foreach (Control aControlObject in this.Controls)
             {
                 //  if the object is a button, make it green
@@ -632,7 +632,7 @@ namespace Simplified21LinhHo
 
         private void LblClick_Click(object sender, EventArgs e)
         {
-            // loop through each object on the form and make it red
+            // loop through each object on the form
             foreach (Control aControlObject in this.Controls)
             {
                 //  if the object is a label, make it green
