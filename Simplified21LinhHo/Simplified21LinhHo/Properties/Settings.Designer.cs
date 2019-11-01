@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Simplified21LinhH.Properties
+namespace Simplified21LinhHo.Properties
 {
 
 

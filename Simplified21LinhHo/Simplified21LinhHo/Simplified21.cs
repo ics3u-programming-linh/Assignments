@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Simplified21LinhH
+namespace Simplified21LinhHo
 {
     static class Simplified21
     {
