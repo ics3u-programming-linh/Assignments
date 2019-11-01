@@ -43,7 +43,16 @@ namespace Simplified21LinhHo
             lblCompCard3.Hide();
             lblCompCard4.Hide();
             btnRestart.Hide();
-            
+            picCompCard.Hide();
+            picCompCard2.Hide();
+            picCompCard3.Hide();
+            picCompCard4.Hide();
+            picPlayerCard.Hide();
+            picPlayerCard2.Hide();
+            picPlayerCard3.Hide();
+            picCompCard5.Hide();
+            lblCompCard5.Hide();
+            picMultipleCards.Hide();
             // Call New Game procedure
             NewGame();
         }
@@ -61,6 +70,16 @@ namespace Simplified21LinhHo
             lblCompCard3.Hide();
             lblCompCard4.Hide();
             btnRestart.Hide();
+            picCompCard.Hide();
+            picCompCard2.Hide();
+            picCompCard3.Hide();
+            picCompCard4.Hide();
+            picPlayerCard.Hide();
+            picPlayerCard2.Hide();
+            picPlayerCard3.Hide();
+            picCompCard5.Hide();
+            lblCompCard5.Hide();
+            picMultipleCards.Hide();
 
             // Show labels, buttons and etc.
             grbMain.Show();
@@ -89,6 +108,12 @@ namespace Simplified21LinhHo
             lblCompCard2.Hide();
             lblCompCard3.Hide();
             lblCompCard4.Hide();
+            lblCompCard5.Hide();
+            picCompCard2.Hide();
+            picCompCard3.Hide();
+            picCompCard4.Hide();
+            picCompCard5.Hide();
+            picPlayerCard3.Hide();
 
             // Show labels, buttons and etc
             grbHitOrStand.Show();
@@ -96,6 +121,10 @@ namespace Simplified21LinhHo
             lblPlayerCard1.Show();
             lblPlayerCard2.Show();
             lblCompCard1.Show();
+            picCompCard.Show();
+            picPlayerCard.Show();
+            picPlayerCard2.Show();
+            picMultipleCards.Show();
 
             // declare variables
             int randomPlayerCard;
@@ -129,8 +158,9 @@ namespace Simplified21LinhHo
 
         private void BtnHit_Click(object sender, EventArgs e)
         {
-            // Show labels
+            // Show labels, pics
             lblPlayerCard3.Show();
+            picPlayerCard3.Show();
 
             // declare variables
             int randomPlayerCardThree;
@@ -180,17 +210,22 @@ namespace Simplified21LinhHo
             btnHit.Enabled = false;
             btnStand.Enabled = false;
 
-            // Show labels
+            // Show labels, pics
             lblCompCard2.Show();
+            picCompCard2.Show();
 
-            // Hide labels
+            // Hide labels, pics
             lblCompCard3.Hide();
             lblCompCard4.Hide();
+            picCompCard3.Hide();
+            picCompCard4.Hide();
+            picCompCard5.Hide();
 
             // declare variables
             int randomCompCardTwo;
             int randomCompCardThree;
             int randomCompCardFour;
+            int randomCompCardFive;
             Random randomNumberGenerator = new Random();
 
             // get random number cards for computer
@@ -202,13 +237,13 @@ namespace Simplified21LinhHo
             // Assign random computer card number to the labels
             lblCompCard2.Text = Convert.ToString(randomCompCardTwo);
             lblDealerScore.Text = Convert.ToString(computerScore);
-
+            
             // Check to see if computer score is less than 17
             if (computerScore < 17)
             {
-                // show label
+                // show label, pics
                 lblCompCard3.Show();
-
+                picCompCard3.Show();
                 // get random number cards for computer
                 randomCompCardThree = randomNumberGenerator.Next(MIN_NUM, MAX_NUM + 1);
 
@@ -222,8 +257,10 @@ namespace Simplified21LinhHo
                 // Check again to see if computer score is less than 17
                 if (computerScore <= 17)
                 {
-                    // Show label
+
+                    // show label, pics
                     lblCompCard4.Show();
+                    picCompCard4.Show();
 
                     // Generate a random number for the fourth card for computer
                     randomCompCardFour = randomNumberGenerator.Next(MIN_NUM, MAX_NUM + 1);
@@ -235,7 +272,26 @@ namespace Simplified21LinhHo
                     lblCompCard4.Text = Convert.ToString(randomCompCardFour);
                     lblDealerScore.Text = Convert.ToString(computerScore);
                 }
-                
+
+                // Check again to see if computer score is less than 17
+                if (computerScore <= 17)
+                {
+
+                    // show label, pics
+                    lblCompCard5.Show();
+                    picCompCard5.Show();
+
+                    // Generate a random number for the fourth card for computer
+                    randomCompCardFive = randomNumberGenerator.Next(MIN_NUM, MAX_NUM + 1);
+
+                    // Calculate the computer score
+                    computerScore = computerScore + randomCompCardFive;
+
+                    // Display score and label
+                    lblCompCard5.Text = Convert.ToString(randomCompCardFive);
+                    lblDealerScore.Text = Convert.ToString(computerScore);
+                }
+
             }
 
             // Compare computer's score and user's score
@@ -308,8 +364,32 @@ namespace Simplified21LinhHo
 
         private void BtnRestart_Click(object sender, EventArgs e)
         {
+            // loop through each object on the form and make it red
+            foreach (Control aControlObject in this.Controls)
+            {
+                //  if the object is a button, make it green
+                if (aControlObject.GetType() == typeof(Button))
+                {
+                    aControlObject.BackColor = Color.LawnGreen;
+                }
+            }
+
+            // call the procedure
             NewGame();
+
         }
 
+        private void LblClick_Click(object sender, EventArgs e)
+        {
+            // loop through each object on the form and make it red
+            foreach (Control aControlObject in this.Controls)
+            {
+                //  if the object is a label, make it green
+                if (aControlObject.GetType() == typeof(Label))
+                {
+                    aControlObject.BackColor = Color.LawnGreen;
+                }
+            }
+        }
     }
 }
