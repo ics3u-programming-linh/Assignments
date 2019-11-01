@@ -257,8 +257,8 @@ namespace Simplified21LinhHo
             }
             else
             {
-                // Enable buttons
-                btnHit.Enabled = true;
+                // Enable/disable buttons
+                btnHit.Enabled = false;
                 btnStand.Enabled = true;
             }
         }
