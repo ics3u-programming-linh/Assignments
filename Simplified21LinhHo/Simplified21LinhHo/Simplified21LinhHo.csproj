@@ -86,5 +86,44 @@
   <ItemGroup>
     <None Include="background.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="card.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="eight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="five.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="four.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="jack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="king.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="nine.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="one.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="queen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="seven.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="six.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="three.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="two.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -32,7 +32,6 @@
             this.lblSimplified = new System.Windows.Forms.Label();
             this.btnStart = new System.Windows.Forms.Button();
             this.grbMain = new System.Windows.Forms.GroupBox();
-            this.picBackground = new System.Windows.Forms.PictureBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.mniNewGame = new System.Windows.Forms.ToolStripMenuItem();
             this.mniExit = new System.Windows.Forms.ToolStripMenuItem();
@@ -47,16 +46,18 @@
             this.grbHitOrStand = new System.Windows.Forms.GroupBox();
             this.lblPlayerCard1 = new System.Windows.Forms.Label();
             this.lblPlayerCard2 = new System.Windows.Forms.Label();
-            this.lblCompCard1 = new System.Windows.Forms.Label();
             this.lblPlayerCard3 = new System.Windows.Forms.Label();
             this.lblCompCard2 = new System.Windows.Forms.Label();
             this.lblCompCard3 = new System.Windows.Forms.Label();
             this.btnRestart = new System.Windows.Forms.Button();
+            this.lblCompCard4 = new System.Windows.Forms.Label();
+            this.lblCompCard1 = new System.Windows.Forms.Label();
+            this.picBackground = new System.Windows.Forms.PictureBox();
             this.grbMain.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picBackground)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.grbScore.SuspendLayout();
             this.grbHitOrStand.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picBackground)).BeginInit();
             this.SuspendLayout();
             // 
             // lblSimplified
@@ -93,16 +94,6 @@
             this.grbMain.TabStop = false;
             this.grbMain.Text = "Created by Linh Ho";
             // 
-            // picBackground
-            // 
-            this.picBackground.Image = global::Simplified21LinhHo.Properties.Resources.main;
-            this.picBackground.Location = new System.Drawing.Point(-16, 0);
-            this.picBackground.Name = "picBackground";
-            this.picBackground.Size = new System.Drawing.Size(958, 190);
-            this.picBackground.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picBackground.TabIndex = 2;
-            this.picBackground.TabStop = false;
-            // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -124,7 +115,7 @@
             // mniExit
             // 
             this.mniExit.Name = "mniExit";
-            this.mniExit.Size = new System.Drawing.Size(37, 20);
+            this.mniExit.Size = new System.Drawing.Size(38, 20);
             this.mniExit.Text = "Exit";
             this.mniExit.Click += new System.EventHandler(this.MniExit_Click);
             // 
@@ -235,15 +226,6 @@
             this.lblPlayerCard2.TabIndex = 14;
             this.lblPlayerCard2.Text = "label2";
             // 
-            // lblCompCard1
-            // 
-            this.lblCompCard1.AutoSize = true;
-            this.lblCompCard1.Location = new System.Drawing.Point(364, 255);
-            this.lblCompCard1.Name = "lblCompCard1";
-            this.lblCompCard1.Size = new System.Drawing.Size(35, 13);
-            this.lblCompCard1.TabIndex = 15;
-            this.lblCompCard1.Text = "label3";
-            // 
             // lblPlayerCard3
             // 
             this.lblPlayerCard3.AutoSize = true;
@@ -256,7 +238,7 @@
             // lblCompCard2
             // 
             this.lblCompCard2.AutoSize = true;
-            this.lblCompCard2.Location = new System.Drawing.Point(416, 255);
+            this.lblCompCard2.Location = new System.Drawing.Point(431, 255);
             this.lblCompCard2.Name = "lblCompCard2";
             this.lblCompCard2.Size = new System.Drawing.Size(35, 13);
             this.lblCompCard2.TabIndex = 17;
@@ -282,11 +264,41 @@
             this.btnRestart.UseVisualStyleBackColor = true;
             this.btnRestart.Click += new System.EventHandler(this.BtnRestart_Click);
             // 
+            // lblCompCard4
+            // 
+            this.lblCompCard4.AutoSize = true;
+            this.lblCompCard4.Location = new System.Drawing.Point(522, 255);
+            this.lblCompCard4.Name = "lblCompCard4";
+            this.lblCompCard4.Size = new System.Drawing.Size(35, 13);
+            this.lblCompCard4.TabIndex = 20;
+            this.lblCompCard4.Text = "label3";
+            // 
+            // lblCompCard1
+            // 
+            this.lblCompCard1.AutoSize = true;
+            this.lblCompCard1.Image = global::Simplified21LinhHo.Properties.Resources.card;
+            this.lblCompCard1.Location = new System.Drawing.Point(364, 255);
+            this.lblCompCard1.Name = "lblCompCard1";
+            this.lblCompCard1.Size = new System.Drawing.Size(35, 13);
+            this.lblCompCard1.TabIndex = 15;
+            this.lblCompCard1.Text = "label3";
+            // 
+            // picBackground
+            // 
+            this.picBackground.Image = global::Simplified21LinhHo.Properties.Resources.main;
+            this.picBackground.Location = new System.Drawing.Point(-16, 0);
+            this.picBackground.Name = "picBackground";
+            this.picBackground.Size = new System.Drawing.Size(958, 190);
+            this.picBackground.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picBackground.TabIndex = 2;
+            this.picBackground.TabStop = false;
+            // 
             // frmSimplified21
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(844, 431);
+            this.Controls.Add(this.lblCompCard4);
             this.Controls.Add(this.btnRestart);
             this.Controls.Add(this.lblCompCard3);
             this.Controls.Add(this.lblCompCard2);
@@ -303,12 +315,12 @@
             this.Text = "Simplified 21 by Linh Ho";
             this.grbMain.ResumeLayout(false);
             this.grbMain.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picBackground)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.grbScore.ResumeLayout(false);
             this.grbScore.PerformLayout();
             this.grbHitOrStand.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picBackground)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -339,6 +351,7 @@
         private System.Windows.Forms.Label lblCompCard2;
         private System.Windows.Forms.Label lblCompCard3;
         private System.Windows.Forms.Button btnRestart;
+        private System.Windows.Forms.Label lblCompCard4;
     }
 }
 

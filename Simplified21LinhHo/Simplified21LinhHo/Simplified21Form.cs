@@ -41,11 +41,11 @@ namespace Simplified21LinhHo
             lblPlayerCard3.Hide();
             lblCompCard2.Hide();
             lblCompCard3.Hide();
+            lblCompCard4.Hide();
             btnRestart.Hide();
-
+            
             // Call New Game procedure
             NewGame();
-
         }
 
         public void NewGame()
@@ -59,6 +59,7 @@ namespace Simplified21LinhHo
             lblPlayerCard3.Hide();
             lblCompCard2.Hide();
             lblCompCard3.Hide();
+            lblCompCard4.Hide();
             btnRestart.Hide();
 
             // Show labels, buttons and etc.
@@ -87,6 +88,7 @@ namespace Simplified21LinhHo
             lblPlayerCard3.Hide();
             lblCompCard2.Hide();
             lblCompCard3.Hide();
+            lblCompCard4.Hide();
 
             // Show labels, buttons and etc
             grbHitOrStand.Show();
@@ -158,7 +160,7 @@ namespace Simplified21LinhHo
             else if (playerScore == BLACKJACK)
             {
                 // Display a message box indicating that user won and disable buttons
-                MessageBox.Show("You win!");
+                MessageBox.Show("You win, blackjack!");
                 btnHit.Enabled = false;
                 btnStand.Enabled = false;
 
@@ -183,10 +185,12 @@ namespace Simplified21LinhHo
 
             // Hide labels
             lblCompCard3.Hide();
+            lblCompCard4.Hide();
 
             // declare variables
             int randomCompCardTwo;
             int randomCompCardThree;
+            int randomCompCardFour;
             Random randomNumberGenerator = new Random();
 
             // get random number cards for computer
@@ -214,6 +218,24 @@ namespace Simplified21LinhHo
                 // Display score and label
                 lblCompCard3.Text = Convert.ToString(randomCompCardThree);
                 lblDealerScore.Text = Convert.ToString(computerScore);
+
+                // Check again to see if computer score is less than 17
+                if (computerScore <= 17)
+                {
+                    // Show label
+                    lblCompCard4.Show();
+
+                    // Generate a random number for the fourth card for computer
+                    randomCompCardFour = randomNumberGenerator.Next(MIN_NUM, MAX_NUM + 1);
+
+                    // Calculate the computer score
+                    computerScore = computerScore + randomCompCardFour;
+
+                    // Display score and label
+                    lblCompCard4.Text = Convert.ToString(randomCompCardFour);
+                    lblDealerScore.Text = Convert.ToString(computerScore);
+                }
+                
             }
 
             // Compare computer's score and user's score
@@ -288,5 +310,6 @@ namespace Simplified21LinhHo
         {
             NewGame();
         }
+
     }
 }
