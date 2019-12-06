@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace BetterGame21LinhH
 {
-    public partial class Form1 : Form
+    public partial class frmBetterGame : Form
     {
-        public Form1()
+        public frmBetterGame()
         {
             InitializeComponent();
         }

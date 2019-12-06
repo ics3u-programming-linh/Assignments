@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace BetterGame21LinhH
 {
-    static class Program
+    static class BetterGame
     {
         /// <summary>
         /// The main entry point for the application.
@@ -16,7 +16,7 @@ namespace BetterGame21LinhH
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new BetterGame21Form());
+            Application.Run(new frmBetterGame());
         }
     }
 }
