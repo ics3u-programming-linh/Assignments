@@ -80,6 +80,7 @@
             this.picUCard.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picUCard.TabIndex = 1;
             this.picUCard.TabStop = false;
+            this.picUCard.Click += new System.EventHandler(this.PicUCard_Click);
             // 
             // picUCard2
             // 
@@ -164,7 +165,7 @@
             this.Controls.Add(this.picUCard);
             this.Controls.Add(this.menuStrip1);
             this.Name = "frmBetterGame";
-            this.Text = "Form1";
+            this.Text = "Simplified 21";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picUCard)).EndInit();
