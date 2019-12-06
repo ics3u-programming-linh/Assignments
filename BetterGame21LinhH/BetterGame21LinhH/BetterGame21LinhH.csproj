@@ -65,6 +65,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -78,6 +79,168 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Cards\2C.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Cards\2D.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Cards\2H.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Cards\2S.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Cards\3C.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Cards\3D.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Cards\3H.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Cards\3S.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Cards\4C.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Cards\4D.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Cards\4H.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Cards\4S.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Cards\5C.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Cards\5D.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Cards\5H.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Cards\5S.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Cards\6C.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Cards\6D.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Cards\6H.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Cards\6S.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Cards\7C.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Cards\7D.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Cards\7H.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Cards\7S.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Cards\8C.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Cards\8D.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Cards\8H.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Cards\8S.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Cards\9C.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Cards\9D.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Cards\9H.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Cards\9S.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Cards\10C.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Cards\10D.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Cards\10H.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Cards\10S.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Cards\AC.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Cards\AD.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Cards\AH.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Cards\AS.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Cards\Back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Cards\Front.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Cards\JC.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Cards\JD.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Cards\JH.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Cards\JS.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Cards\KC.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Cards\KD.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Cards\KH.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Cards\KS.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Cards\QC.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Cards\QD.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Cards\QH.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Cards\QS.JPG" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
