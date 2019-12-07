@@ -242,5 +242,8 @@
   <ItemGroup>
     <None Include="Cards\QS.JPG" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="poker.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
