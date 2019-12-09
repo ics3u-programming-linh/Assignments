@@ -188,85 +188,89 @@ namespace NEWSimplified21LinhH
             listDeckOfCards.Add(Properties.Resources.QH);
             listDeckOfCards.Add(Properties.Resources.QS);
 
+            listDeckOfValues.Add(1);
+            listDeckOfValues.Add(1);
+            listDeckOfValues.Add(1);
+            listDeckOfValues.Add(1);
+
+            listDeckOfValues.Add(2);
+            listDeckOfValues.Add(2);
+            listDeckOfValues.Add(2);
+            listDeckOfValues.Add(2);
+
+            listDeckOfValues.Add(3);
+            listDeckOfValues.Add(3);
+            listDeckOfValues.Add(3);
+            listDeckOfValues.Add(3);
+
+            listDeckOfValues.Add(4);
+            listDeckOfValues.Add(4);
+            listDeckOfValues.Add(4);
+            listDeckOfValues.Add(4);
+
+            listDeckOfValues.Add(4);
+            listDeckOfValues.Add(4);
+            listDeckOfValues.Add(4);
+            listDeckOfValues.Add(4);
+
+            listDeckOfValues.Add(5);
+            listDeckOfValues.Add(5);
+            listDeckOfValues.Add(5);
+            listDeckOfValues.Add(5);
+
+            listDeckOfValues.Add(6);
+            listDeckOfValues.Add(6);
+            listDeckOfValues.Add(6);
+            listDeckOfValues.Add(6);
+
+            listDeckOfValues.Add(7);
+            listDeckOfValues.Add(7);
+            listDeckOfValues.Add(7);
+            listDeckOfValues.Add(7);
+
+            listDeckOfValues.Add(8);
+            listDeckOfValues.Add(8);
+            listDeckOfValues.Add(8);
+            listDeckOfValues.Add(8);
+
+            listDeckOfValues.Add(9);
+            listDeckOfValues.Add(9);
+            listDeckOfValues.Add(9);
+            listDeckOfValues.Add(9);
+
+            listDeckOfValues.Add(10);
+            listDeckOfValues.Add(10);
+            listDeckOfValues.Add(10);
+            listDeckOfValues.Add(10);
+
+            listDeckOfValues.Add(10);
+            listDeckOfValues.Add(10);
+            listDeckOfValues.Add(10);
+            listDeckOfValues.Add(10);
+
+            listDeckOfValues.Add(10);
+            listDeckOfValues.Add(10);
+            listDeckOfValues.Add(10);
+            listDeckOfValues.Add(10);
+
+            listDeckOfValues.Add(10);
+            listDeckOfValues.Add(10);
+            listDeckOfValues.Add(10);
+            listDeckOfValues.Add(10);
+
         }
 
         private void CreateDeckValues()
         {
             // populate list with card values
 
-            listDeckOfValues.Add(1);
-            listDeckOfValues.Add(1);
-            listDeckOfValues.Add(1);
-            listDeckOfValues.Add(1);
 
-            listDeckOfValues.Add(2);
-            listDeckOfValues.Add(2);
-            listDeckOfValues.Add(2);
-            listDeckOfValues.Add(2);
-
-            listDeckOfValues.Add(3);
-            listDeckOfValues.Add(3);
-            listDeckOfValues.Add(3);
-            listDeckOfValues.Add(3);
-
-            listDeckOfValues.Add(4);
-            listDeckOfValues.Add(4);
-            listDeckOfValues.Add(4);
-            listDeckOfValues.Add(4);
-
-            listDeckOfValues.Add(4);
-            listDeckOfValues.Add(4);
-            listDeckOfValues.Add(4);
-            listDeckOfValues.Add(4);
-
-            listDeckOfValues.Add(5);
-            listDeckOfValues.Add(5);
-            listDeckOfValues.Add(5);
-            listDeckOfValues.Add(5);
-
-            listDeckOfValues.Add(6);
-            listDeckOfValues.Add(6);
-            listDeckOfValues.Add(6);
-            listDeckOfValues.Add(6);
-
-            listDeckOfValues.Add(7);
-            listDeckOfValues.Add(7);
-            listDeckOfValues.Add(7);
-            listDeckOfValues.Add(7);
-
-            listDeckOfValues.Add(8);
-            listDeckOfValues.Add(8);
-            listDeckOfValues.Add(8);
-            listDeckOfValues.Add(8);
-
-            listDeckOfValues.Add(9);
-            listDeckOfValues.Add(9);
-            listDeckOfValues.Add(9);
-            listDeckOfValues.Add(9);
-
-            listDeckOfValues.Add(10);
-            listDeckOfValues.Add(10);
-            listDeckOfValues.Add(10);
-            listDeckOfValues.Add(10);
-
-            listDeckOfValues.Add(10);
-            listDeckOfValues.Add(10);
-            listDeckOfValues.Add(10);
-            listDeckOfValues.Add(10);
-
-            listDeckOfValues.Add(10);
-            listDeckOfValues.Add(10);
-            listDeckOfValues.Add(10);
-            listDeckOfValues.Add(10);
-
-            listDeckOfValues.Add(10);
-            listDeckOfValues.Add(10);
-            listDeckOfValues.Add(10);
-            listDeckOfValues.Add(10);
         }
 
-        private int DealCard(ref PictureBox aPictureBox, int cardValue)
+        private int DealCard(ref PictureBox aPictureBox, int randomIndex)
         {
+            // declare variables
+            int cardValue = -1;
 
             // generate a random number
             randomNumber = randomNumberGenerator.Next(0, listDeckOfCards.Count() - 1);
