@@ -42,10 +42,10 @@
             this.picPlayerCard2 = new System.Windows.Forms.PictureBox();
             this.picPlayerCard3 = new System.Windows.Forms.PictureBox();
             this.grbTotal = new System.Windows.Forms.GroupBox();
-            this.lblDealerTotal = new System.Windows.Forms.Label();
-            this.lblPlayerTotal = new System.Windows.Forms.Label();
+            this.lblPlayerTotalAns = new System.Windows.Forms.Label();
             this.lblDealerTotalAns = new System.Windows.Forms.Label();
-            this.lblPlayerTotalAnswer = new System.Windows.Forms.Label();
+            this.lblPlayerTotal = new System.Windows.Forms.Label();
+            this.lblDealerTotal = new System.Windows.Forms.Label();
             this.mnuTaskBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBacground)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picDealerCard)).BeginInit();
@@ -78,7 +78,7 @@
             // mnuExit
             // 
             this.mnuExit.Name = "mnuExit";
-            this.mnuExit.Size = new System.Drawing.Size(37, 20);
+            this.mnuExit.Size = new System.Drawing.Size(38, 20);
             this.mnuExit.Text = "Exit";
             this.mnuExit.Click += new System.EventHandler(this.ExitToolStripMenuItem_Click);
             // 
@@ -107,10 +107,10 @@
             // 
             this.lblSimplified21.AutoSize = true;
             this.lblSimplified21.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.lblSimplified21.Font = new System.Drawing.Font("Bebas Neue", 71.99999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSimplified21.Font = new System.Drawing.Font("Microsoft Sans Serif", 71.99999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSimplified21.Location = new System.Drawing.Point(144, 125);
             this.lblSimplified21.Name = "lblSimplified21";
-            this.lblSimplified21.Size = new System.Drawing.Size(495, 115);
+            this.lblSimplified21.Size = new System.Drawing.Size(604, 108);
             this.lblSimplified21.TabIndex = 3;
             this.lblSimplified21.Text = "Simplified 21";
             // 
@@ -176,7 +176,7 @@
             // 
             // grbTotal
             // 
-            this.grbTotal.Controls.Add(this.lblPlayerTotalAnswer);
+            this.grbTotal.Controls.Add(this.lblPlayerTotalAns);
             this.grbTotal.Controls.Add(this.lblDealerTotalAns);
             this.grbTotal.Controls.Add(this.lblPlayerTotal);
             this.grbTotal.Controls.Add(this.lblDealerTotal);
@@ -187,15 +187,23 @@
             this.grbTotal.TabStop = false;
             this.grbTotal.Text = "Total";
             // 
-            // lblDealerTotal
+            // lblPlayerTotalAns
             // 
-            this.lblDealerTotal.AutoSize = true;
-            this.lblDealerTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDealerTotal.Location = new System.Drawing.Point(15, 25);
-            this.lblDealerTotal.Name = "lblDealerTotal";
-            this.lblDealerTotal.Size = new System.Drawing.Size(60, 20);
-            this.lblDealerTotal.TabIndex = 0;
-            this.lblDealerTotal.Text = "Dealer:";
+            this.lblPlayerTotalAns.AutoSize = true;
+            this.lblPlayerTotalAns.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPlayerTotalAns.Location = new System.Drawing.Point(74, 62);
+            this.lblPlayerTotalAns.Name = "lblPlayerTotalAns";
+            this.lblPlayerTotalAns.Size = new System.Drawing.Size(0, 20);
+            this.lblPlayerTotalAns.TabIndex = 3;
+            // 
+            // lblDealerTotalAns
+            // 
+            this.lblDealerTotalAns.AutoSize = true;
+            this.lblDealerTotalAns.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDealerTotalAns.Location = new System.Drawing.Point(74, 25);
+            this.lblDealerTotalAns.Name = "lblDealerTotalAns";
+            this.lblDealerTotalAns.Size = new System.Drawing.Size(0, 20);
+            this.lblDealerTotalAns.TabIndex = 2;
             // 
             // lblPlayerTotal
             // 
@@ -207,23 +215,15 @@
             this.lblPlayerTotal.TabIndex = 1;
             this.lblPlayerTotal.Text = "Player:";
             // 
-            // lblDealerTotalAns
+            // lblDealerTotal
             // 
-            this.lblDealerTotalAns.AutoSize = true;
-            this.lblDealerTotalAns.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDealerTotalAns.Location = new System.Drawing.Point(74, 25);
-            this.lblDealerTotalAns.Name = "lblDealerTotalAns";
-            this.lblDealerTotalAns.Size = new System.Drawing.Size(0, 20);
-            this.lblDealerTotalAns.TabIndex = 2;
-            // 
-            // lblPlayerTotalAnswer
-            // 
-            this.lblPlayerTotalAnswer.AutoSize = true;
-            this.lblPlayerTotalAnswer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPlayerTotalAnswer.Location = new System.Drawing.Point(74, 62);
-            this.lblPlayerTotalAnswer.Name = "lblPlayerTotalAnswer";
-            this.lblPlayerTotalAnswer.Size = new System.Drawing.Size(0, 20);
-            this.lblPlayerTotalAnswer.TabIndex = 3;
+            this.lblDealerTotal.AutoSize = true;
+            this.lblDealerTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDealerTotal.Location = new System.Drawing.Point(15, 25);
+            this.lblDealerTotal.Name = "lblDealerTotal";
+            this.lblDealerTotal.Size = new System.Drawing.Size(60, 20);
+            this.lblDealerTotal.TabIndex = 0;
+            this.lblDealerTotal.Text = "Dealer:";
             // 
             // frmSimplified21
             // 
@@ -275,7 +275,7 @@
         private System.Windows.Forms.PictureBox picPlayerCard2;
         private System.Windows.Forms.PictureBox picPlayerCard3;
         private System.Windows.Forms.GroupBox grbTotal;
-        private System.Windows.Forms.Label lblPlayerTotalAnswer;
+        private System.Windows.Forms.Label lblPlayerTotalAns;
         private System.Windows.Forms.Label lblDealerTotalAns;
         private System.Windows.Forms.Label lblPlayerTotal;
         private System.Windows.Forms.Label lblDealerTotal;

@@ -26,7 +26,7 @@ namespace NEWSimplified21LinhH
 
         // Declare variables and constants
         Random randomNumberGenerator = new Random();
-        int randomNumber, playerFirstCard, playerSecondCard;
+        int randomNumber, playerFirstCard, playerSecondCard, playerTotal = 0;
 
         public frmSimplified21()
         {
@@ -36,6 +36,7 @@ namespace NEWSimplified21LinhH
 
             // Hide
             grbTotal.Hide();
+            
         }
 
         private void BtnStart_Click(object sender, EventArgs e)
@@ -48,7 +49,11 @@ namespace NEWSimplified21LinhH
             grbTotal.Show();
 
             // call cards shown
+            CreateDeck();
+            StartItems();
+
             CardsShown();
+
         }
 
         private void StartItems()
@@ -58,17 +63,9 @@ namespace NEWSimplified21LinhH
             btnStart.Show();
             lblSimplified21.Show();
 
-            // call the cards down
+            // call the cards down and cards hide
             CardsDown();
-
-            // make the cards not show
-            picDealerCard.Hide();
-            picDealerCard2.Hide();
-            picDealerCard3.Hide();
-
-            picPlayerCard.Hide();
-            picPlayerCard2.Hide();
-            picPlayerCard3.Hide();
+            CardsHide();
 
             // call generate two cards
             GenerateTwoCards();
@@ -119,9 +116,13 @@ namespace NEWSimplified21LinhH
             picPlayerCard3.Hide();
         }
 
+        //private void GenerateRandomNumber()
+        //{
+
+       // }
         private void CreateDeck()
         {
-
+            #region Add Cards
             // populate the list with 52 cards
             listDeckOfCards.Add(Properties.Resources.AC);
             listDeckOfCards.Add(Properties.Resources.AD);
@@ -188,12 +189,7 @@ namespace NEWSimplified21LinhH
             listDeckOfCards.Add(Properties.Resources.QH);
             listDeckOfCards.Add(Properties.Resources.QS);
 
-        }
-
-        private void CreateDeckValues()
-        {
             // populate list with card values
-
             listDeckOfValues.Add(1);
             listDeckOfValues.Add(1);
             listDeckOfValues.Add(1);
@@ -258,33 +254,28 @@ namespace NEWSimplified21LinhH
             listDeckOfValues.Add(10);
             listDeckOfValues.Add(10);
             listDeckOfValues.Add(10);
-
-            listDeckOfValues.Add(10);
-            listDeckOfValues.Add(10);
-            listDeckOfValues.Add(10);
-            listDeckOfValues.Add(10);
+            #endregion
         }
 
-        private int DealCard(ref PictureBox aPictureBox, int cardValue)
+        private int DealCard(ref PictureBox aPictureBox, int randNum)
         {
+            int cardValue;
 
-            // generate a random number
-            randomNumber = randomNumberGenerator.Next(0, listDeckOfCards.Count() - 1);
 
             // set the randomNumber from list to the image
-            Image card = listDeckOfCards[randomNumber];
+            Image card = listDeckOfCards[randNum];
 
             // set the card to a picture from the listBox at a randomIndex
-            aPictureBox.Image = listDeckOfCards[randomNumber];
+            aPictureBox.Image = card;
 
             // get value of card
-            cardValue = listDeckOfValues[randomNumber];
+            cardValue = listDeckOfValues[randNum];
 
             // remove the deck of cards and values from their own list
-            listDeckOfValues.RemoveAt(randomNumber);
+            listDeckOfCards.RemoveAt(randNum);
 
             // remove the deck of cards and values from their own list
-            listDeckOfCards.RemoveAt(randomNumber);
+            listDeckOfValues.RemoveAt(randNum);
 
             // return value
             return cardValue;
@@ -292,11 +283,17 @@ namespace NEWSimplified21LinhH
 
         private void GenerateTwoCards()
         {
+            // generate a random number
+            randomNumber = randomNumberGenerator.Next(0, listDeckOfCards.Count() - 1);
             // display two randomly generated cards
             playerFirstCard = DealCard(ref this.picPlayerCard, randomNumber);
+
+            // generate a random number
+            randomNumber = randomNumberGenerator.Next(0, listDeckOfCards.Count() - 1);
             playerSecondCard = DealCard(ref this.picPlayerCard2, randomNumber);
 
-            lblDealerTotalAns.Text = Convert.ToString(playerFirstCard);
+            playerTotal = playerFirstCard + playerSecondCard;
+            lblPlayerTotalAns.Text = playerTotal + "";
         }
     }
 
