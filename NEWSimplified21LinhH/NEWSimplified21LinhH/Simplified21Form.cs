@@ -475,7 +475,7 @@ namespace NEWSimplified21LinhH
                 CreateDeck();
 
                 // Display a messagebox
-                MessageBox.Show("Running out of cards. Shuffling deck.");
+                MessageBox.Show("You ran out of cards. Deck is reshuffling.");
             }
 
             // declare variables
