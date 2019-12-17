@@ -26,7 +26,7 @@ namespace NEWSimplified21LinhH
         List<int> listDeckOfValues = new List<int>();
 
         // Add sound
-        System.Media.SoundPlayer soundPlayer = new System.Media.SoundPlayer(@"C:\Users\Linh_\Desktop\Assignments\NEWSimplified21LinhH\NEWSimplified21LinhH\Sounds\instrumental.wav");
+        System.Media.SoundPlayer soundPlayer = new System.Media.SoundPlayer(@"N:\Classes\Sem1-Fall2019\ICS3U Programming\HLinh (s272936)\Assignments\NEWSimplified21LinhH\NEWSimplified21LinhH\Sounds\instrumental.wav");
 
         // Declare variables and constants
         Random randomNumberGenerator = new Random();
@@ -612,7 +612,7 @@ namespace NEWSimplified21LinhH
             dealerWinTotal = dealerWinTotal + 1;
 
             // display wins
-            lblDealerWins.Text = "Dealer Wins " + dealerWinTotal;
+            lblDealerWins.Text = "Dealer Wins: " + dealerWinTotal;
         }
     }
 
